@@ -1,0 +1,544 @@
+{
+ "slug": "universum",
+ "lang": "en",
+ "viewport": [
+  1280,
+  800
+ ],
+ "captured": "2026-11-11T14:12:22",
+ "title": "From the WWW to the WWK",
+ "lead": "The path of a statement in seven acts: from the address of a passage to the knowledge network.",
+ "steps": [
+  {
+   "id": "web",
+   "frame": null,
+   "pre": null,
+   "caption": "The World Wide Web connected documents: every page was given an address, and every page could refer to every other.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 9,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "web",
+   "data": {
+    "phase": 1
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "The World Wide Web connected documents: every page was given an address, and every page could refer to every other."
+    ]
+   }
+  },
+  {
+   "id": "frage",
+   "frame": null,
+   "pre": null,
+   "caption": "Language models answer fluently, but without grounds: their citations can be invented.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 8,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "web",
+   "data": {
+    "phase": 2
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Language models answer fluently, but without grounds: their citations can be invented."
+    ]
+   }
+  },
+  {
+   "id": "titel",
+   "frame": null,
+   "pre": null,
+   "caption": "Famulus carries this thought over to knowledge: what is connected is statements with their justifications.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 11,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "card",
+   "card": {
+    "kicker": "Famulus",
+    "title": "From the WWW to the WWK",
+    "lines": [
+     "What the WWW was for documents, the WWK is meant to become for knowledge",
+     "World-Wide Knowledge: a network of addressed, fallible holdings examined by the scientific community"
+    ]
+   }
+  },
+  {
+   "id": "adresse",
+   "frame": null,
+   "pre": null,
+   "caption": "Every document, page and segment has a permanent address.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 9,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "adresse",
+   "data": {
+    "phase": 1
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Every document, page and segment has a permanent address."
+    ]
+   }
+  },
+  {
+   "id": "wortlaut",
+   "frame": null,
+   "pre": null,
+   "caption": "The address leads to the wording. A citation is composed only from recorded bibliographic data; where data is missing, the citation states the gap.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 11,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "adresse",
+   "data": {
+    "phase": 2
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "The address leads to the wording. A citation is composed only from recorded bibliographic data; where data is missing, the citation states the gap."
+    ]
+   }
+  },
+  {
+   "id": "edition",
+   "frame": "frames/edition.webp",
+   "pre": null,
+   "caption": "The same passage in the edition of Euler's correspondence: the facsimile on the left, the transcription on the right.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": [
+    0.5543,
+    0.3201,
+    0.3918,
+    0.0585
+   ],
+   "zoom": 1.35,
+   "chrome": true,
+   "hold": 8,
+   "tour": true,
+   "cards": [],
+   "url": "https://famulus.lettre.ai/euler/eulerOO/978-3-0348-0892-7?p=14"
+  },
+  {
+   "id": "evidenz",
+   "frame": null,
+   "pre": null,
+   "caption": "The evidence: every statement split into its parts, and every part bound to the wording of the source.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": true,
+   "hold": 24,
+   "tour": true,
+   "cards": [],
+   "url": "https://famulus.lettre.ai/euler/",
+   "kind": "card",
+   "card": {
+    "kicker": "The evidence",
+    "title": "A statement and its justification",
+    "ki_label": "Usual AI answer",
+    "woher": "Where from?",
+    "famulus_label": "Famulus",
+    "status_label": "Status",
+    "status_text": "proposal",
+    "von": " of ",
+    "begruendet_label": "parts justified",
+    "fazit": "true proposition + justification = knowledge",
+    "evidence": {
+     "aussage": "Christian Goldbach wurde am 18. März 1690 in Königsberg in Ostpreußen geboren.",
+     "teile": [
+      {
+       "rolle": "Person",
+       "aussage": "Christian Goldbach",
+       "spanne": "Christian Goldbach",
+       "spanne_voll": "Christian Goldbach"
+      },
+      {
+       "rolle": "Event",
+       "aussage": "geboren",
+       "spanne": "was born",
+       "spanne_voll": "was born on March 18th, 1690, at Königsberg"
+      },
+      {
+       "rolle": "Date",
+       "aussage": "18. März 1690",
+       "spanne": "March 18th, 1690",
+       "spanne_voll": "born on March 18th, 1690"
+      },
+      {
+       "rolle": "Place",
+       "aussage": "Königsberg",
+       "spanne": "Königsberg",
+       "spanne_voll": "at Königsberg"
+      }
+     ],
+     "beleg": "Christian Goldbach was born on March 18th, 1690, at Königsberg in Eastern Prussia",
+     "img": "evidenz-beleg.webp",
+     "status": "vorgeschlagen",
+     "adresse": "P:978-3-0348-0892-7#13/p1",
+     "ref": "Opera omnia IV A 4, introduction, p. 4",
+     "begruendet": 4,
+     "klauseln": 4
+    }
+   }
+  },
+  {
+   "id": "validiert",
+   "frame": null,
+   "pre": null,
+   "caption": "What the evidence does not carry is marked as not validated. That is no verdict of falsity.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 11,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "card",
+   "card": {
+    "kicker": "II · Validation",
+    "title": "“Not validated” does not mean “false”",
+    "lines": [
+     "A sentence is factually validated when its propositions follow from registered grounds",
+     "Missing evidence justifies nothing and refutes nothing"
+    ]
+   }
+  },
+  {
+   "id": "experten",
+   "frame": null,
+   "pre": null,
+   "caption": "Famulus experts are services with certified knowledge of a domain.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 9,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "experte",
+   "data": {
+    "phase": 1
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Famulus experts are services with certified knowledge of a domain."
+    ]
+   }
+  },
+  {
+   "id": "gemessen",
+   "frame": null,
+   "pre": null,
+   "caption": "Certified means measured: every computation is checked against documented comparisons.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 11,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "experte",
+   "data": {
+    "phase": 2
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Certified means measured: every computation is checked against documented comparisons."
+    ]
+   }
+  },
+  {
+   "id": "katalog",
+   "frame": "frames/katalog.webp",
+   "pre": null,
+   "caption": "One catalogue lists for each expert its domain, status, measured comparisons and gaps.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": true,
+   "hold": 8,
+   "tour": true,
+   "cards": [],
+   "url": "https://famulus.lettre.ai/experts/"
+  },
+  {
+   "id": "notebook",
+   "frame": null,
+   "pre": null,
+   "caption": "In the Famulus Notebook the researcher asks a question; an agent plays the score, and the block records answer, check and provenance together.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 11,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "notebook",
+   "data": {},
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "In the Famulus Notebook the researcher asks a question; an agent plays the score, and the block records answer, check and provenance together."
+    ]
+   }
+  },
+  {
+   "id": "notebook-seite",
+   "frame": "frames/notebook-seite.webp",
+   "pre": null,
+   "caption": "Notebooks stay private, are shared in a group or are published.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": true,
+   "hold": 8,
+   "tour": true,
+   "cards": [],
+   "url": "https://famulus.lettre.ai/notebook/"
+  },
+  {
+   "id": "siegel",
+   "frame": null,
+   "pre": null,
+   "caption": "A notebook becomes an issue of the series Famulus Expertise. The quality seal presupposes three necessary conditions and the author's release.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 12,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "siegel",
+   "data": {},
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "A notebook becomes an issue of the series Famulus Expertise. The quality seal presupposes three necessary conditions and the author's release."
+    ]
+   }
+  },
+  {
+   "id": "heft",
+   "frame": "frames/heft.webp",
+   "pre": null,
+   "caption": "5 issues are online, 0 of them with the quality seal. Every issue stays open to critique.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": true,
+   "hold": 8,
+   "tour": true,
+   "cards": [],
+   "url": "https://famulus.lettre.ai/euler/lettre/1/"
+  },
+  {
+   "id": "register",
+   "frame": null,
+   "pre": null,
+   "caption": "The network needs no centre: every reference point publishes its own signed register.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 9,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "netz",
+   "data": {
+    "phase": 1
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "The network needs no centre: every reference point publishes its own signed register."
+    ]
+   }
+  },
+  {
+   "id": "netz",
+   "frame": null,
+   "pre": null,
+   "caption": "What is connected is not documents but statements with their justifications. Reference points of other institutions are future work.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 10,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "netz",
+   "data": {
+    "phase": 2
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "What is connected is not documents but statements with their justifications. Reference points of other institutions are future work."
+    ]
+   }
+  },
+  {
+   "id": "zeile",
+   "frame": null,
+   "pre": null,
+   "caption": "The Web grew because a reference cost one line. In the WWK the reference to a piece of evidence costs one line as well.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 10,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "netz",
+   "data": {
+    "phase": 3
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "The Web grew because a reference cost one line. In the WWK the reference to a piece of evidence costs one line as well."
+    ]
+   }
+  },
+  {
+   "id": "fundament",
+   "frame": null,
+   "pre": null,
+   "caption": "Built today: the address order, the register without a centre within the project's own network, the addresses of notebooks, the import of published issues.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 13,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "card",
+   "card": {
+    "kicker": "As of 11 November 2026",
+    "title": "The foundation is in place",
+    "figures": [
+     {
+      "v": "29",
+      "k": "collections with addresses"
+     },
+     {
+      "v": "34",
+      "k": "namespaces in the own register"
+     },
+     {
+      "v": "5",
+      "k": "issues of the series Famulus Expertise"
+     },
+     {
+      "v": "11",
+      "k": "interfaces for agents"
+     }
+    ],
+    "lines": [
+     "Built: the address order, the register without a centre, the addresses of notebooks, the import of published issues",
+     "Future work: reference points of other institutions"
+    ]
+   }
+  }
+ ]
+}

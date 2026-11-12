@@ -1,0 +1,586 @@
+{
+ "slug": "universum",
+ "lang": "de",
+ "viewport": [
+  1280,
+  800
+ ],
+ "captured": "2026-11-11T14:12:22",
+ "title": "Vom WWW zum WWK",
+ "lead": "Der Weg einer Aussage in sieben Akten: von der Adresse einer Stelle bis in das Wissensnetz.",
+ "steps": [
+  {
+   "id": "web",
+   "frame": null,
+   "pre": null,
+   "caption": "Das World Wide Web hat Dokumente verbunden: Jede Seite bekam eine Adresse, und jede Seite konnte auf jede andere verweisen.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 9,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "web",
+   "data": {
+    "phase": 1
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Das World Wide Web hat Dokumente verbunden: Jede Seite bekam eine Adresse, und jede Seite konnte auf jede andere verweisen."
+    ]
+   },
+   "audio": "voice/web.m4a",
+   "audio_s": 10.21
+  },
+  {
+   "id": "frage",
+   "frame": null,
+   "pre": null,
+   "caption": "Sprachmodelle antworten flüssig, aber nicht begründet: Ihre Zitate können erfunden sein.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 8,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "web",
+   "data": {
+    "phase": 2
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Sprachmodelle antworten flüssig, aber nicht begründet: Ihre Zitate können erfunden sein."
+    ]
+   },
+   "audio": "voice/frage.m4a",
+   "audio_s": 10.59
+  },
+  {
+   "id": "titel",
+   "frame": null,
+   "pre": null,
+   "caption": "Famulus überträgt diesen Gedanken auf Wissen: verbunden werden Aussagen mit ihren Begründungen.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 11,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "card",
+   "card": {
+    "kicker": "Famulus",
+    "title": "Vom WWW zum WWK",
+    "lines": [
+     "Was das WWW für Dokumente war, soll das WWK für Wissen werden",
+     "World-Wide Knowledge: ein Netz adressierter, fehlbarer, von der wissenschaftlichen Gemeinschaft geprüfter Bestände"
+    ]
+   },
+   "audio": "voice/titel.m4a",
+   "audio_s": 13.39
+  },
+  {
+   "id": "adresse",
+   "frame": null,
+   "pre": null,
+   "caption": "Jedes Dokument, jede Seite, jedes Segment hat eine dauerhafte Adresse.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 9,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "adresse",
+   "data": {
+    "phase": 1
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Jedes Dokument, jede Seite, jedes Segment hat eine dauerhafte Adresse."
+    ]
+   },
+   "audio": "voice/adresse.m4a",
+   "audio_s": 7.84
+  },
+  {
+   "id": "wortlaut",
+   "frame": null,
+   "pre": null,
+   "caption": "Die Adresse führt zum Wortlaut. Eine Zitation entsteht nur aus erfassten bibliographischen Daten; fehlt eine Angabe, nennt die Zitation die Lücke.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 11,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "adresse",
+   "data": {
+    "phase": 2
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Die Adresse führt zum Wortlaut. Eine Zitation entsteht nur aus erfassten bibliographischen Daten; fehlt eine Angabe, nennt die Zitation die Lücke."
+    ]
+   },
+   "audio": "voice/wortlaut.m4a",
+   "audio_s": 13.16
+  },
+  {
+   "id": "edition",
+   "frame": "frames/edition.webp",
+   "pre": null,
+   "caption": "Dieselbe Stelle in der Edition von Eulers Briefwechsel: links das Faksimile, rechts die Transkription.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": [
+    0.5543,
+    0.3201,
+    0.3918,
+    0.0585
+   ],
+   "zoom": 1.35,
+   "chrome": true,
+   "hold": 8,
+   "tour": true,
+   "cards": [],
+   "url": "https://famulus.lettre.ai/euler/eulerOO/978-3-0348-0892-7?p=14",
+   "audio": "voice/edition.m4a",
+   "audio_s": 8.72
+  },
+  {
+   "id": "evidenz",
+   "frame": null,
+   "pre": null,
+   "caption": "Der Evidenznachweis: jede Aussage in ihre Teile zerlegt und jeder Teil an den Wortlaut der Quelle gebunden.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": true,
+   "hold": 24,
+   "tour": true,
+   "cards": [],
+   "url": "https://famulus.lettre.ai/euler/",
+   "kind": "card",
+   "card": {
+    "kicker": "Der Evidenznachweis",
+    "title": "Eine Aussage und ihre Rechtfertigung",
+    "ki_label": "Übliche KI-Antwort",
+    "woher": "Woher?",
+    "famulus_label": "Famulus",
+    "status_label": "Status",
+    "status_text": "Vorschlag",
+    "von": " von ",
+    "begruendet_label": "Satzteilen begründet",
+    "fazit": "wahre Aussage + Rechtfertigung = Wissen",
+    "evidence": {
+     "aussage": "Christian Goldbach wurde am 18. März 1690 in Königsberg in Ostpreußen geboren.",
+     "teile": [
+      {
+       "rolle": "Person",
+       "aussage": "Christian Goldbach",
+       "spanne": "Christian Goldbach",
+       "spanne_voll": "Christian Goldbach"
+      },
+      {
+       "rolle": "Ereignis",
+       "aussage": "geboren",
+       "spanne": "was born",
+       "spanne_voll": "was born on March 18th, 1690, at Königsberg"
+      },
+      {
+       "rolle": "Datum",
+       "aussage": "18. März 1690",
+       "spanne": "March 18th, 1690",
+       "spanne_voll": "born on March 18th, 1690"
+      },
+      {
+       "rolle": "Ort",
+       "aussage": "Königsberg",
+       "spanne": "Königsberg",
+       "spanne_voll": "at Königsberg"
+      }
+     ],
+     "beleg": "Christian Goldbach was born on March 18th, 1690, at Königsberg in Eastern Prussia",
+     "img": "evidenz-beleg.webp",
+     "status": "vorgeschlagen",
+     "adresse": "P:978-3-0348-0892-7#13/p1",
+     "ref": "Opera omnia IV A 4, Einleitung, S. 4",
+     "begruendet": 4,
+     "klauseln": 4
+    }
+   },
+   "audio": "voice/evidenz.m4a",
+   "audio_s": 30.14
+  },
+  {
+   "id": "validiert",
+   "frame": null,
+   "pre": null,
+   "caption": "Was die Belege nicht tragen, wird als nicht validiert ausgewiesen. Das ist kein Urteil über Falschheit.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 11,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "card",
+   "card": {
+    "kicker": "II · Validierung",
+    "title": "„Nicht validiert“ heißt nicht „falsch“",
+    "lines": [
+     "Ein Satz ist sachlich validiert, wenn seine Aussagen aus registrierten Belegen folgen",
+     "Ein fehlender Beleg rechtfertigt nichts und widerlegt nichts"
+    ]
+   },
+   "audio": "voice/validiert.m4a",
+   "audio_s": 11.87
+  },
+  {
+   "id": "experten",
+   "frame": null,
+   "pre": null,
+   "caption": "Famulus-Experten sind Dienste mit geprüftem Fachwissen eines Gebiets.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 9,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "experte",
+   "data": {
+    "phase": 1
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Famulus-Experten sind Dienste mit geprüftem Fachwissen eines Gebiets."
+    ]
+   },
+   "audio": "voice/experten.m4a",
+   "audio_s": 11.6
+  },
+  {
+   "id": "gemessen",
+   "frame": null,
+   "pre": null,
+   "caption": "Geprüft heißt gemessen: Jede Rechnung ist an dokumentierten Vergleichen geprüft.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 11,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "experte",
+   "data": {
+    "phase": 2
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Geprüft heißt gemessen: Jede Rechnung ist an dokumentierten Vergleichen geprüft."
+    ]
+   },
+   "audio": "voice/gemessen.m4a",
+   "audio_s": 9.9
+  },
+  {
+   "id": "katalog",
+   "frame": "frames/katalog.webp",
+   "pre": null,
+   "caption": "Ein gemeinsamer Katalog nennt für jeden Experten Gebiet, Stand, gemessene Vergleiche und Lücken.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": true,
+   "hold": 8,
+   "tour": true,
+   "cards": [],
+   "url": "https://famulus.lettre.ai/experts/",
+   "audio": "voice/katalog.m4a",
+   "audio_s": 8.85
+  },
+  {
+   "id": "notebook",
+   "frame": null,
+   "pre": null,
+   "caption": "Im Famulus Notebook stellt der Forscher eine Frage; eine Fachkraft spielt die Partitur, und der Block hält Antwort, Prüfung und Herkunft zusammen fest.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 11,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "notebook",
+   "data": {},
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Im Famulus Notebook stellt der Forscher eine Frage; eine Fachkraft spielt die Partitur, und der Block hält Antwort, Prüfung und Herkunft zusammen fest."
+    ]
+   },
+   "audio": "voice/notebook.m4a",
+   "audio_s": 11.9
+  },
+  {
+   "id": "notebook-seite",
+   "frame": "frames/notebook-seite.webp",
+   "pre": null,
+   "caption": "Notebooks bleiben privat, werden in einer Gruppe geteilt oder veröffentlicht.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": true,
+   "hold": 8,
+   "tour": true,
+   "cards": [],
+   "url": "https://famulus.lettre.ai/notebook/",
+   "audio": "voice/notebook-seite.m4a",
+   "audio_s": 5.89
+  },
+  {
+   "id": "siegel",
+   "frame": null,
+   "pre": null,
+   "caption": "Aus einem Notebook wird ein Heft der Reihe Famulus Expertise. Das Gütesiegel setzt drei notwendige Bedingungen und die Freigabe des Autors voraus.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 12,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "siegel",
+   "data": {},
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Aus einem Notebook wird ein Heft der Reihe Famulus Expertise. Das Gütesiegel setzt drei notwendige Bedingungen und die Freigabe des Autors voraus."
+    ]
+   },
+   "audio": "voice/siegel.m4a",
+   "audio_s": 20.8
+  },
+  {
+   "id": "heft",
+   "frame": "frames/heft.webp",
+   "pre": null,
+   "caption": "5 Hefte sind online, 0 davon mit Gütesiegel. Jedes Heft bleibt der Kritik offen.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": true,
+   "hold": 8,
+   "tour": true,
+   "cards": [],
+   "url": "https://famulus.lettre.ai/euler/lettre/1/",
+   "audio": "voice/heft.m4a",
+   "audio_s": 7.2
+  },
+  {
+   "id": "register",
+   "frame": null,
+   "pre": null,
+   "caption": "Ein Zentrum braucht das Netz nicht: Jeder Reference-Punkt veröffentlicht sein eigenes, signiertes Register.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 9,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "netz",
+   "data": {
+    "phase": 1
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Ein Zentrum braucht das Netz nicht: Jeder Reference-Punkt veröffentlicht sein eigenes, signiertes Register."
+    ]
+   },
+   "audio": "voice/register.m4a",
+   "audio_s": 8.33
+  },
+  {
+   "id": "netz",
+   "frame": null,
+   "pre": null,
+   "caption": "Verbunden sind dann nicht Dokumente, sondern Aussagen mit ihren Rechtfertigungen. Reference-Punkte anderer Einrichtungen sind Ausbau.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 10,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "netz",
+   "data": {
+    "phase": 2
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Verbunden sind dann nicht Dokumente, sondern Aussagen mit ihren Rechtfertigungen. Reference-Punkte anderer Einrichtungen sind Ausbau."
+    ]
+   },
+   "audio": "voice/netz.m4a",
+   "audio_s": 11.75
+  },
+  {
+   "id": "zeile",
+   "frame": null,
+   "pre": null,
+   "caption": "Das Web ist gewachsen, weil ein Verweis eine Zeile kostete. Im WWK kostet der Verweis auf einen Beleg ebenfalls eine Zeile.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 10,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "netz",
+   "data": {
+    "phase": 3
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Das Web ist gewachsen, weil ein Verweis eine Zeile kostete. Im WWK kostet der Verweis auf einen Beleg ebenfalls eine Zeile."
+    ]
+   },
+   "audio": "voice/zeile.m4a",
+   "audio_s": 10.24
+  },
+  {
+   "id": "fundament",
+   "frame": null,
+   "pre": null,
+   "caption": "Gebaut sind die Adressordnung, das Register ohne Zentrum im eigenen Verbund, die Adressen der Notebooks und der Import veröffentlichter Hefte.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 13,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "card",
+   "card": {
+    "kicker": "Stand 11.11.2026",
+    "title": "Das Fundament steht",
+    "figures": [
+     {
+      "v": "29",
+      "k": "Sammlungen mit Adressen"
+     },
+     {
+      "v": "34",
+      "k": "Namensräume im eigenen Register"
+     },
+     {
+      "v": "5",
+      "k": "Hefte der Reihe Famulus Expertise"
+     },
+     {
+      "v": "11",
+      "k": "Schnittstellen für Agenten"
+     }
+    ],
+    "lines": [
+     "Gebaut: die Adressordnung, das Register ohne Zentrum, die Adressen der Notebooks, der Import veröffentlichter Hefte",
+     "Ausbau: Reference-Punkte anderer Einrichtungen"
+    ]
+   },
+   "audio": "voice/fundament.m4a",
+   "audio_s": 15.49
+  }
+ ],
+ "voice": {
+  "engine": "basel-saetze",
+  "label": "Schweizer Hochdeutsch nach dem Dialekt-Vorbild, satzweise erzeugt (Qwen3-TTS Base bf16, lokal)"
+ }
+}

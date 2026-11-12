@@ -1,0 +1,205 @@
+/* Famulus Universum: the entrance page. Builds on landing.css (Oxford blue, gold, sandstone).
+   Smallest text 0.78rem (12.5 px): the 12 px minimum of the landing acceptance holds on every width. */
+
+main.uv { overflow-x: clip; }
+
+/* ---------------------------------------------------------------- first screen: dark, the map beside the text */
+.uv-hero {
+  padding: 3.2rem 0 1.4rem;
+  color: #f4efe4;
+  background:
+    radial-gradient(900px 520px at 78% 38%, rgba(196, 161, 90, 0.20), transparent 62%),
+    radial-gradient(700px 420px at 8% -10%, rgba(44, 74, 110, 0.75), transparent 70%),
+    linear-gradient(180deg, #00152e 0%, #001d40 62%, #002147 100%);
+  border-bottom: 3px solid var(--gold);
+}
+.uv-hero-grid { display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr); gap: 1.5rem 2.5rem; align-items: center; }
+.uv-hero .kicker { color: var(--gold); }
+.uv-hero h1 { color: #fffdf8; font-size: clamp(2.6rem, 5.6vw, 4.6rem); }
+.uv-hero h1 em { display: block; margin-top: 0.35rem; color: var(--gold); font-size: 0.62em; letter-spacing: -0.015em; line-height: 1.05; }
+.uv-persp { margin: 1.5rem 0 0; max-width: 36rem; font-family: var(--display); font-style: italic; font-weight: 460; font-size: clamp(1.2rem, 1.9vw, 1.5rem); line-height: 1.36; color: #fffdf8; }
+.uv-sentence { margin: 1rem 0 0; max-width: 36rem; font-size: 1.05rem; line-height: 1.5; color: #d9d2c2; }
+.uv-hero code, .uv-chapter code, .uv-foundation code { font-family: "SF Mono", ui-monospace, Menlo, Consolas, monospace; font-size: 0.92em; }
+.uv-hero .hero-sticker { position: relative; top: auto; right: auto; float: none; margin: 1.7rem 0 0 0.3rem; }
+
+.uv-map { min-width: 0; }
+.uv-map-stage { width: 100%; max-width: 620px; margin: 0 auto; aspect-ratio: 1 / 1; }
+.uv-map-stage svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.uv-map-info { min-height: 3.1em; margin: 0.2rem auto 0; max-width: 34rem; text-align: center; font-family: var(--sans); font-size: 0.9rem; line-height: 1.4; color: #d9d2c2; }
+.uv-map-info b { color: var(--gold); font-weight: 650; }
+
+/* the marks of the map (drawn by universum.js) */
+.uv-orbit { fill: none; stroke: rgba(196, 161, 90, 0.22); stroke-width: 1; }
+.uv-link { stroke: rgba(196, 161, 90, 0.34); stroke-width: 1.2; }
+.uv-path { fill: none; stroke: var(--gold); stroke-width: 2.2; stroke-linecap: round; }
+.uv-path-head { fill: var(--gold); }
+.uv-core-glow { fill: rgba(196, 161, 90, 0.16); }
+.uv-core { fill: var(--gold); stroke: #fffdf8; stroke-width: 2; }
+.uv-core-t { fill: #00152e; font-family: var(--sans); font-weight: 650; text-anchor: middle; }
+.uv-node circle { fill: #00152e; stroke: var(--gold); stroke-width: 2.4; transition: fill 0.2s, stroke-width 0.2s; }
+.uv-node text.num { fill: var(--gold); font-family: var(--display); font-weight: 560; text-anchor: middle; }
+.uv-node text.name { fill: #fffdf8; font-family: var(--sans); font-weight: 650; text-anchor: middle; }
+.uv-node:hover circle, .uv-node:focus circle, .uv-node.on circle { fill: var(--gold); stroke-width: 3.4; }
+.uv-node:hover text.num, .uv-node:focus text.num, .uv-node.on text.num { fill: #00152e; }
+.uv-node:focus { outline: none; }
+.uv-node:focus-visible circle { stroke: #fffdf8; }
+.uv-sat { stroke: var(--gold); stroke-width: 1.3; }
+.uv-sat.s-laeuft, .uv-sat.s-gebaut { fill: var(--gold); }
+.uv-sat.s-none { fill: #d9d2c2; stroke: #d9d2c2; }
+.uv-sat.s-entwurf { fill: #00152e; }
+.uv-sat.s-ausbau, .uv-sat.s-perspektive { fill: none; stroke-dasharray: 2.4 2.2; }
+.uv-pulse { fill: #fffdf8; }
+.uv-map-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.3rem 1.1rem; margin: 0.5rem 0 0; padding: 0; list-style: none; font-family: var(--sans); font-size: 0.8rem; color: #d9d2c2; }
+.uv-map-legend i { display: inline-block; width: 0.62rem; height: 0.62rem; margin-right: 0.35rem; border-radius: 50%; border: 1.5px solid var(--gold); vertical-align: -0.04rem; }
+.uv-map-legend .l-on i { background: var(--gold); }
+.uv-map-legend .l-out i { border-style: dashed; }
+.uv-map-legend .l-reg i { background: #d9d2c2; border-color: #d9d2c2; }
+
+.uv-fig-label { margin: 1.6rem 0 0; font-family: var(--sans); font-size: 0.8rem; letter-spacing: 0.06em; color: var(--gold); }
+.uv-hero .uv-figures { margin: 0.5rem 0 0.6rem; border-color: rgba(196, 161, 90, 0.35); }
+.uv-hero .uv-figures div { border-right-color: rgba(196, 161, 90, 0.25); }
+.uv-hero .uv-figures .v { color: var(--gold); font-size: 2.1rem; }
+.uv-hero .uv-figures .k { color: #d9d2c2; }
+
+/* ---------------------------------------------------------------- bands */
+main.uv section.band > h2 { font-size: 2rem; }
+main.uv section.band { padding-top: 2.6rem; }
+main.uv section.band + section.band { border-top: 1px solid var(--line); margin-top: 1.6rem; }
+.uv-sub { margin: 1.6rem 0 0.6rem; font-family: var(--sans); font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-deep); font-weight: 650; }
+
+/* the short versions: the same thought at growing length */
+.uv-steps { display: grid; gap: 0; border-top: 3px solid var(--oxford); background: var(--paper); border: 1px solid var(--line); border-top: 3px solid var(--oxford); }
+.uv-step { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 0.4rem 1.6rem; padding: 1.2rem 1.5rem; border-top: 1px solid var(--line); }
+.uv-step:first-child { border-top: 0; }
+.uv-step h3 { margin: 0.1rem 0 0; font-family: var(--display); font-weight: 560; font-size: 1.25rem; color: var(--oxford); }
+.uv-step p { margin: 0; max-width: 48rem; }
+.uv-step:first-child p { font-family: var(--display); font-size: 1.32rem; line-height: 1.38; color: var(--oxford); }
+.uv-reading { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.3rem 2rem; }
+.uv-reading li { padding: 0.35rem 0 0.35rem 1.1rem; position: relative; }
+.uv-reading li::before { content: "\2192"; position: absolute; left: 0; color: var(--gold-deep); }
+
+/* the index of the chapters: the map once more, as text */
+.uv-index { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0.7rem; margin: 1.2rem 0 2rem; }
+.uv-tile { display: flex; flex-direction: column; gap: 0.2rem; padding: 0.85rem 0.9rem 0.8rem; text-decoration: none; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-top: 4px solid var(--gold); transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s; }
+.uv-tile:hover, .uv-tile:focus-visible { border-top-color: var(--oxford); box-shadow: 0 12px 26px rgba(0, 21, 46, 0.10); transform: translateY(-2px); color: var(--ink); }
+.uv-tile-num { font-family: var(--display); font-size: 1.5rem; line-height: 1; color: var(--gold-deep); }
+.uv-tile-name { font-family: var(--display); font-weight: 560; font-size: 1.16rem; color: var(--oxford); overflow-wrap: anywhere; }
+.uv-tile-title { font-size: 0.86rem; line-height: 1.3; color: var(--muted); }
+.uv-tile-n { margin-top: auto; padding-top: 0.4rem; font-family: var(--sans); font-size: 0.8rem; color: var(--gold-deep); font-weight: 650; }
+
+/* one chapter: one thought, one way in, everything else folded */
+.uv-chapter { margin: 0 0 1.4rem; background: var(--paper); border: 1px solid var(--line); border-top: 4px solid var(--oxford); box-shadow: 0 14px 34px rgba(0, 21, 46, 0.06); scroll-margin-top: 1rem; }
+.uv-ch-head { display: grid; grid-template-columns: auto 1fr; align-items: baseline; column-gap: 1rem; padding: 1.4rem 1.7rem 0; }
+.uv-ch-num { grid-row: span 2; margin: 0; align-self: start; font-family: var(--display); font-size: 0.86rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-deep); font-weight: 650; padding-top: 0.75rem; }
+.uv-ch-head h3 { margin: 0; font-family: var(--display); font-weight: 560; font-size: clamp(1.9rem, 3.4vw, 2.6rem); letter-spacing: -0.02em; line-height: 1.05; color: var(--oxford); }
+.uv-ch-title { margin: 0.25rem 0 0; font-style: italic; color: var(--muted); font-size: 1.05rem; }
+.uv-ch-body { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 1.2rem 2.2rem; align-items: center; padding: 1.1rem 1.7rem 1.4rem; }
+.uv-claim { margin: 0; font-size: 1.16rem; line-height: 1.5; max-width: 40rem; }
+.uv-claim-src { margin: 0.5rem 0 0; font-family: var(--sans); font-size: 0.82rem; color: var(--muted); }
+.uv-go-row { margin: 1.1rem 0 0; }
+.uv-go-row .go { margin: 0; }
+.uv-main-off { font-family: var(--sans); font-size: 0.9rem; color: var(--muted); }
+.uv-mini { position: relative; aspect-ratio: 16 / 10; background: #00152e; border-bottom: 3px solid var(--gold); overflow: hidden; }
+.uv-mini:empty { display: none; }
+.uv-mini.on { display: block; }
+.uv-ch-body:has(.uv-mini:empty) { grid-template-columns: 1fr; }
+
+.uv-all { border-top: 1px solid var(--line); }
+.uv-all > summary { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.7rem; padding: 0.85rem 1.7rem; cursor: pointer; font-family: var(--sans); font-weight: 650; font-size: 0.95rem; color: var(--oxford); list-style: none; }
+.uv-all > summary::-webkit-details-marker { display: none; }
+.uv-all > summary::before { content: "+"; display: grid; place-items: center; width: 1.35rem; height: 1.35rem; border: 1px solid var(--oxford); border-radius: 50%; font-weight: 500; line-height: 1; }
+.uv-all[open] > summary::before { content: "\2212"; }
+.uv-all > summary:hover { background: var(--sand); }
+.uv-all > summary:focus-visible { outline: 3px solid var(--gold); outline-offset: -3px; }
+.uv-n { display: inline-block; min-width: 1.5rem; padding: 0.05rem 0.4rem; border-radius: 1rem; background: var(--sand-deep); color: var(--oxford); font-family: var(--sans); font-size: 0.8rem; font-weight: 650; text-align: center; }
+.uv-tally { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-left: auto; font-weight: 500; }
+.uv-group { padding: 0.5rem 1.7rem 1.2rem; }
+.uv-group h4 { margin: 0.6rem 0 0.7rem; font-family: var(--sans); font-size: 0.82rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--oxford); font-weight: 650; }
+
+.uv-cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr)); gap: 0.8rem; }
+.uv-card { padding: 0.8rem 0.95rem 0.85rem; background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--gold); min-width: 0; }
+.uv-card[data-state="ausbau"], .uv-card[data-state="perspektive"] { border-left-style: dashed; background: transparent; }
+.uv-card[data-state="entwurf"] { border-left-color: var(--oxford-soft); }
+.uv-card-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.3rem 0.6rem; margin: 0 0 0.35rem; min-height: 1.2rem; }
+.uv-card h5 { margin: 0; font-family: var(--display); font-weight: 560; font-size: 1.12rem; line-height: 1.2; color: var(--oxford); overflow-wrap: anywhere; }
+.uv-card h5 a { color: var(--oxford); }
+.uv-card h5 a:hover { color: var(--gold-deep); }
+.uv-card-text { margin: 0.35rem 0 0; font-size: 0.94rem; line-height: 1.42; }
+.uv-card-facts { margin: 0.4rem 0 0; font-family: var(--sans); font-size: 0.84rem; color: var(--gold-deep); font-weight: 600; }
+.uv-card-stand { margin: 0.45rem 0 0; padding-top: 0.4rem; border-top: 1px dotted var(--line-strong); font-family: var(--sans); font-size: 0.8rem; line-height: 1.4; color: var(--muted); }
+.uv-card-stand b { color: var(--ink); font-weight: 650; }
+.uv-card code { font-size: 1em; }
+
+.uv-st { display: inline-block; padding: 0.08rem 0.5rem; border-radius: 1rem; border: 1.5px solid var(--oxford); font-family: var(--sans); font-size: 0.78rem; font-weight: 650; line-height: 1.35; white-space: nowrap; }
+.uv-st-laeuft { background: var(--oxford); color: #fff; }
+.uv-st-gebaut { background: var(--gold-deep); border-color: var(--gold-deep); color: #fff; }
+.uv-st-entwurf { background: transparent; color: var(--oxford); }
+.uv-st-ausbau { background: transparent; color: var(--muted); border-color: var(--muted); border-style: dashed; }
+.uv-st-perspektive { background: transparent; color: var(--gold-deep); border-color: var(--gold-deep); border-style: dashed; }
+.uv-pl { font-family: var(--sans); font-size: 0.78rem; color: var(--muted); white-space: nowrap; }
+.uv-pl-public { color: var(--gold-deep); font-weight: 650; }
+.uv-pl-public::after { content: " \2197"; }
+
+.uv-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.uv-chip { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 0.15rem 0.5rem; padding: 0.3rem 0.75rem; background: #fff; border: 1px solid var(--line-strong); border-radius: 2rem; font-family: var(--sans); font-size: 0.92rem; }
+.uv-chip a { color: var(--oxford); font-weight: 650; text-decoration: none; }
+.uv-chip a::after { content: " \2197"; color: var(--gold-deep); }
+.uv-chip a:hover { color: var(--gold-deep); }
+.uv-chip small { font-size: 0.8rem; color: var(--muted); }
+.uv-chip[data-place="netz"], .uv-chip[data-place="none"] { background: transparent; border-style: dashed; }
+
+/* ---------------------------------------------------------------- the foundation: what is built, what comes next */
+.uv-foundation .uv-built { margin: 0 0 0.4rem; max-width: 52rem; font-family: var(--display); font-size: clamp(1.25rem, 2.2vw, 1.6rem); line-height: 1.36; color: var(--oxford); }
+.uv-found-figs .uv-open { background: repeating-linear-gradient(135deg, transparent 0 7px, rgba(140, 109, 42, 0.07) 7px 14px); }
+.uv-found-figs .uv-open .v { color: var(--muted); }
+.uv-line { margin: 1.2rem 0 0; padding: 0.2rem 0 0.2rem 1.2rem; max-width: 48rem; border-left: 4px solid var(--gold); font-family: var(--display); font-style: italic; font-size: 1.22rem; line-height: 1.42; color: var(--oxford); }
+.uv-expect { margin: 0.9rem 0 0; max-width: 48rem; color: var(--muted); }
+
+/* ---------------------------------------------------------------- state and limits */
+.uv-legend { list-style: none; margin: 0 0 1.2rem; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 0.9rem; align-items: center; }
+.uv-limit-list { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2.2rem; }
+.uv-limit-list li { padding: 0.7rem 0; border-top: 1px solid var(--line); font-size: 0.98rem; line-height: 1.5; }
+.uv-limit-list b { color: var(--oxford); font-weight: 650; }
+.uv-open-list { margin: 0; padding-left: 1.2rem; font-size: 0.95rem; }
+.uv-open-list li { margin: 0.25rem 0; }
+.uv-open-list .uv-gap b { color: #8a2c1c; }
+
+/* ---------------------------------------------------------------- three ways in (cards as on the front page) */
+.uv-ways .ways { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; padding-bottom: 1.4rem; }
+.uv-ways .way { display: flex; flex-direction: column; gap: 0.35rem; text-decoration: none; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--gold); padding: 1rem 1.15rem; box-shadow: 0 8px 22px rgba(0, 21, 46, 0.04); transition: border-color 0.15s, box-shadow 0.15s; }
+.uv-ways a.way:hover { border-left-color: var(--oxford); box-shadow: 0 12px 28px rgba(0, 21, 46, 0.09); color: var(--ink); }
+.uv-ways .who { font-family: var(--display); font-weight: 560; font-size: 1.2rem; color: var(--oxford); }
+.uv-ways .what { font-size: 0.96rem; line-height: 1.45; }
+.uv-ways .go { margin: auto 0 0; padding: 0.5rem 0 0; background: none; color: var(--gold-deep); font-family: var(--sans); font-weight: 650; font-size: 0.9rem; }
+
+/* ---------------------------------------------------------------- drawn scenes (universum-scenes.js) in the player and as miniatures */
+.gp-slide.gp-scene { padding: 0; display: block; }
+.gp-slide.gp-scene svg, .uv-mini svg { display: block; width: 100%; height: 100%; }
+.uv-mini { background: radial-gradient(520px 300px at 80% 0%, rgba(196, 161, 90, 0.22), transparent 62%), linear-gradient(160deg, #00152e, #002147 60%, #0b2a52); }
+/* the player of the film is seen only full screen; its end card needs no link into a viewer */
+
+/* ---------------------------------------------------------------- narrower screens */
+@media (max-width: 1020px) {
+  .uv-hero-grid { grid-template-columns: 1fr; }
+  .uv-map-stage { max-width: 560px; }
+  .uv-index { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .uv-ch-body { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  .uv-hero { padding-top: 2.2rem; }
+  .uv-hero .uv-figures { grid-template-columns: repeat(2, 1fr); }
+  .uv-hero .uv-figures div, .uv-found-figs div { border-bottom: 1px solid rgba(196, 161, 90, 0.25); }
+  .uv-found-figs { grid-template-columns: repeat(2, 1fr); }
+  .uv-found-figs div { border-bottom-color: var(--line); }
+  .uv-index { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .uv-step { grid-template-columns: 1fr; padding: 1rem 1.1rem; }
+  .uv-reading, .uv-limit-list, .uv-ways .ways { grid-template-columns: 1fr; }
+  .uv-ch-head { grid-template-columns: 1fr; padding: 1.1rem 1.1rem 0; }
+  .uv-ch-num { grid-row: auto; padding-top: 0; }
+  .uv-ch-body { padding: 0.9rem 1.1rem 1.1rem; }
+  .uv-all > summary { padding: 0.8rem 1.1rem; }
+  .uv-tally { margin-left: 0; width: 100%; }
+  .uv-group { padding: 0.4rem 1.1rem 1rem; }
+  .uv-cards { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { .uv-tile, .uv-node circle { transition: none; } }
