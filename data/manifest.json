@@ -54,8 +54,89 @@
    "source": "own reference point (famulus-reference), /api/describe (citation composed from the recorded bibliography)"
   },
   "snapshot_id": {
-   "value": 1074,
+   "value": 1092,
    "source": "own reference point (famulus-reference), (snapshot of the store the answer was read from)"
+  },
+  "ev_kinds": {
+   "value": [
+    {
+     "kind": "sentence",
+     "ref": "fr:eulerOO/978-3-0348-0892-7/0013/s003",
+     "found": true,
+     "resolved_as": "sentence",
+     "title": null,
+     "gap": null
+    },
+    {
+     "kind": "cell",
+     "ref": "fr:kepler-context/Lansberge1591/0039/tabula1/r16/c6",
+     "found": false,
+     "resolved_as": null,
+     "title": null,
+     "gap": "not resolved"
+    },
+    {
+     "kind": "figure",
+     "ref": "fr:kepler-prim/kgw-03/0195/fig01",
+     "found": true,
+     "resolved_as": "figure",
+     "title": null,
+     "gap": null
+    },
+    {
+     "kind": "object",
+     "ref": "fr:bsdp/obj1",
+     "found": true,
+     "resolved_as": "document",
+     "title": "Dialface ID 1",
+     "gap": null
+    },
+    {
+     "kind": "person",
+     "ref": "fr:reg/P012039",
+     "found": true,
+     "resolved_as": "person",
+     "title": "Goldbach, Christian",
+     "gap": null
+    }
+   ],
+   "source": "own reference point (famulus-reference), /fr/<address> for one address per kind of evidence"
+  },
+  "ev_kinds_found": {
+   "value": 4,
+   "source": "same: addresses that resolve"
+  },
+  "lw_entry": {
+   "value": {
+    "ref": "fr:lw/kepler-prim/aequatio.la",
+    "found": true,
+    "lemma": "aequatio",
+    "lang": "la",
+    "scope": "kepler-prim",
+    "status": "revised",
+    "first": "kgw-01:30",
+    "senses": [
+     {
+      "label": "I.1",
+      "definition": "The amount by which a mean or uniform motion deviates from the true or apparent motion; a correction applied to mean motion to obtain true position."
+     },
+     {
+      "label": "I.1a",
+      "definition": "The equation of time: the correction between mean and apparent time, added to or subtracted from the one to obtain the other."
+     },
+     {
+      "label": "I.1b",
+      "definition": "The Moon's monthly equation (aequatio menstrua): an equation of the Moon's motion that runs its course within the month."
+     }
+    ],
+    "forms": [
+     "aequationes",
+     "aequationem",
+     "aequationis",
+     "aequationum"
+    ]
+   },
+   "source": "own reference point (famulus-reference), /fr/lw/kepler-prim/aequatio.la (LWgrammar entry with its senses)"
   },
   "editions_public": {
    "value": 11,
@@ -102,11 +183,11 @@
    "source": "publication/famulus-lettre/series.yaml series[]"
   },
   "papers_typeset": {
-   "value": 26,
+   "value": 41,
    "source": "data/arxiv/papers.json papers[] with stage gesetzt"
   },
   "papers_pages": {
-   "value": 672,
+   "value": 866,
    "source": "data/arxiv/papers.json pages of the typeset papers"
   },
   "mcp_servers": {
@@ -122,7 +203,7 @@
    "source": "platform/docs/famulus.qmd, table \"Bestandteile und Stand\""
   },
   "canon_gebaut": {
-   "value": 4,
+   "value": 7,
    "source": "platform/docs/famulus.qmd, table \"Bestandteile und Stand\""
   },
   "canon_entwurf": {
@@ -142,17 +223,19 @@
    "source": "platform/docs/famulus.qmd front matter"
   },
   "asof_iso": {
-   "value": "2026-11-12",
+   "value": "2026-11-16",
    "source": "date of this collection run"
   },
   "asof_de": {
-   "value": "12.11.2026",
+   "value": "16.11.2026",
    "source": "date of this collection run"
   },
   "asof_en": {
-   "value": "12 November 2026",
+   "value": "16 November 2026",
    "source": "date of this collection run"
   }
  },
- "notes": []
+ "notes": [
+  "reference point /fr/kepler-context/Lansberge1591/0039/tabula1/r16/c6: no answer (HTTP Error 404: Not Found)"
+ ]
 }

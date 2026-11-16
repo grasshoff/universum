@@ -5,9 +5,9 @@
   1280,
   800
  ],
- "captured": "2026-11-11T14:12:22",
+ "captured": "2026-11-16T10:07:15",
  "title": "Vom WWW zum WWK",
- "lead": "Der Weg einer Aussage in sieben Akten: von der Adresse einer Stelle bis in das Wissensnetz.",
+ "lead": "Sieben Funktionen, viele Felder: von der Adresse einer Stelle bis in das Wissensnetz.",
  "steps": [
   {
    "id": "web",
@@ -157,6 +157,34 @@
    "audio_s": 13.16
   },
   {
+   "id": "belege",
+   "frame": null,
+   "pre": null,
+   "caption": "Für die Validierung zählt nur die Grounding-Evidenz. Jede Art von Beleg hat ihre Adresse: Satz, Abbildung, Objekt, Registereintrag und die einzelne Zelle einer Tafel.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 12,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "belege",
+   "data": {},
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Für die Validierung zählt nur die Grounding-Evidenz. Jede Art von Beleg hat ihre Adresse: Satz, Abbildung, Objekt, Registereintrag und die einzelne Zelle einer Tafel."
+    ]
+   },
+   "audio": "voice/belege.m4a",
+   "audio_s": 14.12
+  },
+  {
    "id": "edition",
    "frame": "frames/edition.webp",
    "pre": null,
@@ -178,6 +206,133 @@
    "url": "https://famulus.lettre.ai/euler/eulerOO/978-3-0348-0892-7?p=14",
    "audio": "voice/edition.m4a",
    "audio_s": 8.72
+  },
+  {
+   "id": "sprache",
+   "frame": null,
+   "pre": null,
+   "caption": "Die Regeln des Sprachgebrauchs sind registriert, zitierbar und revidierbar – relativ zu Autor, Werk und Zeit.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 12,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "sprache",
+   "data": {},
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Die Regeln des Sprachgebrauchs sind registriert, zitierbar und revidierbar – relativ zu Autor, Werk und Zeit."
+    ]
+   },
+   "audio": "voice/sprache.m4a",
+   "audio_s": 13.39
+  },
+  {
+   "id": "woerterbuch",
+   "frame": "frames/woerterbuch.webp",
+   "pre": null,
+   "caption": "Ein Terminus führt auf seinen Eintrag: seine Bedeutungen im Sprachgebrauch der Sammlung, mit den Belegstellen.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": [
+    0.0125,
+    0.08,
+    0.4688,
+    0.9
+   ],
+   "zoom": null,
+   "chrome": true,
+   "hold": 8,
+   "tour": true,
+   "cards": [],
+   "url": "https://famulus.lettre.ai/euler/eulerOO/978-3-0348-0892-7?p=433",
+   "audio": "voice/woerterbuch.m4a",
+   "audio_s": 8.88
+  },
+  {
+   "id": "instrumente",
+   "frame": null,
+   "pre": null,
+   "caption": "Die Famulus-Experten bilden ein System sich ergänzender Fertigkeiten: Tafeln, Rechnungen, Modelle, Himmel und Zeit. Jeder beherrscht ein Instrument des Schließens.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 12,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "instrumente",
+   "data": {},
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Die Famulus-Experten bilden ein System sich ergänzender Fertigkeiten: Tafeln, Rechnungen, Modelle, Himmel und Zeit. Jeder beherrscht ein Instrument des Schließens."
+    ]
+   },
+   "audio": "voice/instrumente.m4a",
+   "audio_s": 11.14
+  },
+  {
+   "id": "gemessen",
+   "frame": null,
+   "pre": null,
+   "caption": "Geprüft heißt gemessen: Jede Rechnung ist an dokumentierten Vergleichen geprüft.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 11,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "experte",
+   "data": {
+    "phase": 2
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Geprüft heißt gemessen: Jede Rechnung ist an dokumentierten Vergleichen geprüft."
+    ]
+   },
+   "audio": "voice/gemessen.m4a",
+   "audio_s": 9.9
+  },
+  {
+   "id": "katalog",
+   "frame": "frames/katalog.webp",
+   "pre": null,
+   "caption": "Ein gemeinsamer Katalog nennt für jeden Experten Gebiet, Stand, gemessene Vergleiche und Lücken.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": true,
+   "hold": 8,
+   "tour": true,
+   "cards": [],
+   "url": "https://famulus.lettre.ai/experts/",
+   "audio": "voice/katalog.m4a",
+   "audio_s": 8.85
   },
   {
    "id": "evidenz",
@@ -272,84 +427,6 @@
    },
    "audio": "voice/validiert.m4a",
    "audio_s": 11.87
-  },
-  {
-   "id": "experten",
-   "frame": null,
-   "pre": null,
-   "caption": "Famulus-Experten sind Dienste mit geprüftem Fachwissen eines Gebiets.",
-   "key": [],
-   "target": null,
-   "clicks": 0,
-   "focus": null,
-   "zoom": null,
-   "chrome": false,
-   "hold": 9,
-   "tour": true,
-   "cards": [],
-   "url": null,
-   "kind": "scene",
-   "scene": "experte",
-   "data": {
-    "phase": 1
-   },
-   "card": {
-    "kicker": "Famulus",
-    "title": "",
-    "lines": [
-     "Famulus-Experten sind Dienste mit geprüftem Fachwissen eines Gebiets."
-    ]
-   },
-   "audio": "voice/experten.m4a",
-   "audio_s": 11.6
-  },
-  {
-   "id": "gemessen",
-   "frame": null,
-   "pre": null,
-   "caption": "Geprüft heißt gemessen: Jede Rechnung ist an dokumentierten Vergleichen geprüft.",
-   "key": [],
-   "target": null,
-   "clicks": 0,
-   "focus": null,
-   "zoom": null,
-   "chrome": false,
-   "hold": 11,
-   "tour": true,
-   "cards": [],
-   "url": null,
-   "kind": "scene",
-   "scene": "experte",
-   "data": {
-    "phase": 2
-   },
-   "card": {
-    "kicker": "Famulus",
-    "title": "",
-    "lines": [
-     "Geprüft heißt gemessen: Jede Rechnung ist an dokumentierten Vergleichen geprüft."
-    ]
-   },
-   "audio": "voice/gemessen.m4a",
-   "audio_s": 9.9
-  },
-  {
-   "id": "katalog",
-   "frame": "frames/katalog.webp",
-   "pre": null,
-   "caption": "Ein gemeinsamer Katalog nennt für jeden Experten Gebiet, Stand, gemessene Vergleiche und Lücken.",
-   "key": [],
-   "target": null,
-   "clicks": 0,
-   "focus": null,
-   "zoom": null,
-   "chrome": true,
-   "hold": 8,
-   "tour": true,
-   "cards": [],
-   "url": "https://famulus.lettre.ai/experts/",
-   "audio": "voice/katalog.m4a",
-   "audio_s": 8.85
   },
   {
    "id": "notebook",
@@ -534,6 +611,80 @@
    "audio_s": 10.24
   },
   {
+   "id": "science",
+   "frame": null,
+   "pre": null,
+   "caption": "Famulus Science: Module, die den Arbeitsprozess der Forschung begleiten. Jedes ruht auf den sieben Funktionen.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 14,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "science",
+   "data": {},
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Famulus Science: Module, die den Arbeitsprozess der Forschung begleiten. Jedes ruht auf den sieben Funktionen."
+    ]
+   },
+   "audio": "voice/science.m4a",
+   "audio_s": 10.2
+  },
+  {
+   "id": "science-seite",
+   "frame": "frames/science-seite.webp",
+   "pre": null,
+   "caption": "Von der Forschungsfrage bis zur Publikation: Famulus für Wissenschaft und Forschung.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": true,
+   "hold": 8,
+   "tour": true,
+   "cards": [],
+   "url": "https://famulus.lettre.ai/famulus-science/",
+   "audio": "voice/science-seite.m4a",
+   "audio_s": 7.27
+  },
+  {
+   "id": "felder",
+   "frame": null,
+   "pre": null,
+   "caption": "Ein Anwendungsfeld ist eine Kombination der Funktionen. Ein neues Feld bringt eigene Bestände, eigene Sprachregeln und eigene Experten mit; alles Übrige ist da.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 14,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "felder",
+   "data": {},
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Ein Anwendungsfeld ist eine Kombination der Funktionen. Ein neues Feld bringt eigene Bestände, eigene Sprachregeln und eigene Experten mit; alles Übrige ist da."
+    ]
+   },
+   "audio": "voice/felder.m4a",
+   "audio_s": 13.11
+  },
+  {
    "id": "fundament",
    "frame": null,
    "pre": null,
@@ -550,7 +701,7 @@
    "url": null,
    "kind": "card",
    "card": {
-    "kicker": "Stand 11.11.2026",
+    "kicker": "Stand 16.11.2026",
     "title": "Das Fundament steht",
     "figures": [
      {
@@ -558,7 +709,7 @@
       "k": "Sammlungen mit Adressen"
      },
      {
-      "v": "34",
+      "v": "35",
       "k": "Namensräume im eigenen Register"
      },
      {

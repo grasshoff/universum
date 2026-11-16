@@ -32,14 +32,18 @@
           limit: 'Schwelle', noLimit: 'gemessen, ohne Schwelle', rows: ['Frage', 'Partitur', 'Antwort', 'Prüfung', 'Herkunft'], issue: 'Heft',
           refers: 'jede Zahl verweist auf ihren Block', gates: ['Lektor: Zustimmung des Autors', 'Referenzen als Belege', 'Qualitätsgates erfüllt'],
           seal: 'Gütesiegel', online: 'Hefte online', sealed: 'mit Gütesiegel', register: 'eigenes, signiertes Register', spaces: 'Namensräume',
-          others: 'Reference-Punkte anderer Einrichtungen', oneLine: 'Ein Verweis: eine Zeile' },
+          others: 'Reference-Punkte anderer Einrichtungen', oneLine: 'Ein Verweis: eine Zeile',
+          kinds: { sentence: 'Satz', cell: 'Tafelzelle', figure: 'Abbildung', object: 'Objekt mit 3D-Modell', person: 'Registereintrag' },
+          open: 'noch nicht auflösbar', senses: 'Bedeutungen', context: 'im Sprachgebrauch von', brings: 'bringt das Feld mit', uses: 'nutzt', rests: 'ruht auf' },
     en: { prolog: 'Prologue', web: 'World Wide Web', webSub: 'documents, connected by references', ai: 'AI answer', whence: 'Where from?',
           segs: ['scheme', 'collection', 'document', 'page', 'passage'], sentence: 'sentence', gapAddr: 'Gap: the address does not resolve.',
           colls: 'collections in the shared store', claim: 'Statement', ground: 'Evidence', measured: 'comparisons measured', passed: 'passed',
           limit: 'threshold', noLimit: 'measured, no threshold', rows: ['Question', 'Score', 'Answer', 'Check', 'Provenance'], issue: 'Issue',
           refers: 'every number refers to its block', gates: ['Lektor: the author’s assent', 'References as evidence', 'Quality gates fulfilled'],
           seal: 'Quality seal', online: 'issues online', sealed: 'with the quality seal', register: 'its own signed register', spaces: 'namespaces',
-          others: 'Reference points of other institutions', oneLine: 'One reference: one line' },
+          others: 'Reference points of other institutions', oneLine: 'One reference: one line',
+          kinds: { sentence: 'sentence', cell: 'table cell', figure: 'figure', object: 'object with 3D model', person: 'register entry' },
+          open: 'does not resolve yet', senses: 'senses', context: 'in the usage of', brings: 'the field brings', uses: 'uses', rests: 'rests on' },
   };
 
   // the stage of a scene: an SVG of 1280 × 800 units; fs(n) keeps text at 12.5 px or more on the screen
@@ -51,8 +55,7 @@
     const fs = n => Math.max(n, min);
     const svg = d3.select(el).append('svg').attr('class', 'uvs').attr('viewBox', '0 0 1280 800').attr('preserveAspectRatio', 'xMidYMid meet')
       .attr('aria-hidden', 'true').style('width', '100%').style('height', '100%').style('display', 'block');
-    const ch = (U.chapters || []).find(c => c.scene === scene);
-    const kicker = ch ? ch.num + ' · ' + ch.name : T.prolog;
+    const kicker = (U.kick || {})[scene] || T.prolog;
     svg.append('text').attr('x', 70).attr('y', 70 + fs(26) * 0.4).attr('font-family', SANS).attr('font-weight', 650).attr('font-size', fs(26))
       .attr('letter-spacing', '0.12em').attr('fill', GOLD).text(kicker.toUpperCase());
     const text = (g, x, y, s, size, o) => {
@@ -68,7 +71,7 @@
     return d3.range(n).map(i => (ph ? (i + 1 < ph ? 1 : i + 1 === ph ? p : 0) : clamp(p * n - i)));
   }
   const cut = (s, n) => (s && s.length > n ? s.slice(0, n - 1).replace(/[\s,;:]+\S*$/, '') + ' …' : s || '');
-  const wrap = (s, n) => { const out = ['']; (s || '').split(/\s+/).forEach(w => { if ((out[out.length - 1] + ' ' + w).trim().length > n) out.push(w); else out[out.length - 1] = (out[out.length - 1] + ' ' + w).trim(); }); return out; };
+  const wrap = (s, n) => { const out = ['']; (s || '').split(/\s+/).forEach(w => { if (out[out.length - 1] && (out[out.length - 1] + ' ' + w).trim().length > n) out.push(w); else out[out.length - 1] = (out[out.length - 1] + ' ' + w).trim(); }); return out; };
   const num = (v, lang) => {
     if (v == null) return '–';
     if (Math.abs(v) < 1e-4 && v !== 0) { const e = Math.floor(Math.log10(Math.abs(v))), m = (v / Math.pow(10, e)).toFixed(1); return (lang === 'de' ? m.replace('.', ',') : m) + ' · 10' + String(e).replace('-', '⁻').replace(/\d/g, d => '⁰¹²³⁴⁵⁶⁷⁸⁹'[d]); }
@@ -155,7 +158,151 @@
     };
   };
 
-  /* ---------------------------------------------------------------- II Validierung: every part of a statement bound to the wording */
+
+  /* ---------------------------------------------------------------- 1 Belegen: one statement, many kinds of grounding evidence */
+  NS.belege = function (el, step, ctx) {
+    const S = stage(el, ctx, 'belege'), svg = S.svg, T = S.T, ks = (S.U.kinds || []).slice(0, 5), n = ks.length || 1;
+    const cx = 250, cy = 370, top = 170, gap = Math.min(110, 480 / n), size = S.small ? 30 : 30;
+    const gl = svg.append('g');
+    svg.append('circle').attr('cx', cx).attr('cy', cy).attr('r', 74).attr('fill', GOLD).attr('stroke', PAPER).attr('stroke-width', 3);
+    wrap(S.U.core || T.claim, 12).slice(0, 2).forEach((l, k, a) => svg.append('text').attr('x', cx).attr('y', cy + (k - (a.length - 1) / 2) * S.fs(22) * 1.15 + S.fs(22) * 0.35)
+      .attr('text-anchor', 'middle').attr('font-family', SANS).attr('font-weight', 650).attr('font-size', S.fs(22)).attr('fill', DEEP).text(l));
+    const rows = ks.map((k, i) => {
+      const y = top + i * gap, g = svg.append('g'), ok = !!k.found, x = 560;
+      const line = gl.append('path').attr('fill', 'none').attr('stroke', GOLD).attr('stroke-width', 2.6).attr('stroke-dasharray', ok ? null : '7 7');
+      g.append('circle').attr('cx', x).attr('cy', y - 10).attr('r', 13).attr('fill', ok ? GOLD : 'none').attr('stroke', GOLD).attr('stroke-width', 3).attr('stroke-dasharray', ok ? null : '5 4');
+      S.text(g, x + 34, y, T.kinds[k.kind] || k.kind, size, { weight: 650 });
+      if (!S.small) S.text(g, x + 34, y + 34, cut(ok ? k.ref : k.ref + '  ·  ' + T.open, 58), 22, { font: MONO, fill: ok ? PALE : GOLD });
+      return { g, line, y: y - 10, x };
+    });
+    return {
+      frame(p) {
+        rows.forEach((o, i) => {
+          const a = 0.08 + i * 0.15, u = seg(p, a, a + 0.22), x2 = cx + 74 + (o.x - 16 - cx - 74) * u, y2 = cy + (o.y - cy) * u;
+          o.line.attr('d', u > 0 ? `M${cx + 74},${cy} C${cx + 190},${cy} ${x2 - 110},${y2} ${x2},${y2}` : null);
+          o.g.attr('opacity', seg(p, a + 0.14, a + 0.3));
+        });
+      },
+      stop() {},
+    };
+  };
+
+  /* ---------------------------------------------------------------- 2 Verstehen: one word, its senses in the usage of an author */
+  NS.sprache = function (el, step, ctx) {
+    const S = stage(el, ctx, 'sprache'), svg = S.svg, T = S.T, lw = S.U.lw || {}, senses = (lw.senses || []).slice(0, 3);
+    const lemma = S.text(svg, 90, 300, lw.lemma || '–', S.small ? 84 : 104, { font: DISPLAY, italic: true, fill: GOLD, weight: 460 });
+    const sub = S.small ? null : S.text(svg, 94, 356, T.context + ' ' + (lw.scope || ''), 24, { fill: PALE });
+    const x = S.small ? 90 : 660, y0 = S.small ? 400 : 190, gap = S.small ? 90 : 150;
+    const rows = senses.map((s, i) => {
+      const g = svg.append('g'), y = y0 + i * gap;
+      S.text(g, x, y, s.label || String(i + 1), 30, { font: DISPLAY, fill: GOLD, weight: 560 });
+      wrap(cut(s.definition, S.small ? 44 : 84), S.small ? 34 : 30).slice(0, S.small ? 1 : 3).forEach((l, k) => S.text(g, x + 86, y + k * 34, l, 24, { font: SERIF }));
+      const line = S.small ? null : svg.append('path').attr('fill', 'none').attr('stroke', GOLD).attr('stroke-width', 2.2).attr('opacity', 0.8);
+      return { g, line, y: y - 10 };
+    });
+    const foot = S.small || !lw.ref ? null : S.text(svg, 640, 650, senses.length + ' ' + T.senses + '  ·  ' + lw.ref, 24, { anchor: 'middle', fill: GOLD, weight: 650 });
+    return {
+      frame(p) {
+        lemma.attr('opacity', seg(p, 0, 0.18));
+        if (sub) sub.attr('opacity', seg(p, 0.12, 0.3));
+        rows.forEach((o, i) => {
+          const a = 0.26 + i * 0.2, u = seg(p, a, a + 0.18);
+          if (o.line) o.line.attr('d', u > 0 ? `M500,270 C570,270 560,${o.y} ${500 + (x - 22 - 500) * u},${270 + (o.y - 270) * u}` : null);
+          o.g.attr('opacity', seg(p, a + 0.1, a + 0.26));
+        });
+        if (foot) foot.attr('opacity', seg(p, 0.86, 1));
+      },
+      stop() {},
+    };
+  };
+
+  /* ---------------------------------------------------------------- 3 Rechnen und Modellieren: the experts, each an instrument of reasoning */
+  NS.instrumente = function (el, step, ctx) {
+    const S = stage(el, ctx, 'instrumente'), svg = S.svg;
+    const ch = (S.U.chapters || []).find(c => (c.scenes || []).includes('instrumente')) || {}, items = (ch.instruments || []).slice(0, 9);
+    const cols = S.small ? 2 : 3, shown = S.small ? items.slice(0, 6) : items, w = (1100 - (cols - 1) * 26) / cols, h = S.small ? 150 : 150, x0 = 90, y0 = 150;
+    const tiles = shown.map((it, i) => {
+      const x = x0 + (i % cols) * (w + 26), y = y0 + Math.floor(i / cols) * (h + 22), g = svg.append('g'), on = it.s === 'laeuft' || it.s === 'gebaut';
+      g.append('rect').attr('x', x).attr('y', y).attr('width', w).attr('height', h).attr('rx', 12).attr('fill', DEEP).attr('stroke', GOLD).attr('stroke-width', 2.6).attr('stroke-dasharray', on ? null : '8 6');
+      if (!S.small) S.text(g, x + 22, y + 38, it.g, 20, { fill: GOLD, weight: 650 });
+      const nm = it.n.replace(/\s*\(.*$/, ''), fit = Math.max(20, Math.min(28, (w - 44) / (0.54 * Math.max(...nm.split(' ').map(q => q.length), 8))));
+      wrap(cut(nm, 44), Math.floor((w - 44) / (0.54 * S.fs(fit)))).slice(0, 2).forEach((l, k) => S.text(g, x + 22, y + (S.small ? 62 : 80) + k * S.fs(fit) * 1.12, l, fit, { font: DISPLAY, weight: 560 }));
+      if (!S.small) S.text(g, x + w - 20, y + 38, (S.U.states || {})[it.s] || '', 20, { anchor: 'end', fill: PALE });
+      return g;
+    });
+    return {
+      frame(p) {
+        tiles.forEach((g, i) => g.attr('opacity', seg(p, 0.05 + i * 0.09, 0.2 + i * 0.09)).attr('transform', `translate(0,${16 * (1 - seg(p, 0.05 + i * 0.09, 0.24 + i * 0.09))})`));
+      },
+      stop() {},
+    };
+  };
+
+  /* ---------------------------------------------------------------- Famulus Science: the modules, each resting on functions */
+  NS.science = function (el, step, ctx) {
+    const S = stage(el, ctx, 'science'), svg = S.svg, T = S.T, fn = S.U.chapters || [], mods = S.U.science || [];
+    const fx = d3.scalePoint().domain(fn.map(c => String(c.num))).range([150, 1130]), fy = 600;
+    const cols = S.small ? 2 : 4, shown = S.small ? mods.slice(0, 6) : mods, w = 1100 / cols, y0 = 150, rh = S.small ? 110 : 96;
+    const gl = svg.append('g');
+    fn.forEach(c => {
+      svg.append('circle').attr('cx', fx(String(c.num))).attr('cy', fy).attr('r', 30).attr('fill', DEEP).attr('stroke', GOLD).attr('stroke-width', 3);
+      S.text(svg, fx(String(c.num)), fy + S.fs(28) * 0.36, String(c.num), 28, { font: DISPLAY, anchor: 'middle', fill: GOLD, weight: 560 });
+      if (!S.small) S.text(svg, fx(String(c.num)), fy + 62, cut(c.name, 14), 20, { anchor: 'middle', fill: PALE });
+    });
+    const tiles = shown.map((m, i) => {
+      const x = 90 + (i % cols) * w, y = y0 + Math.floor(i / cols) * rh, g = svg.append('g'), on = m.s !== 'ausbau';
+      const r = g.append('rect').attr('x', x).attr('y', y).attr('width', w - 18).attr('height', rh - 16).attr('rx', 10).attr('fill', DEEP).attr('stroke', GOLD).attr('stroke-width', 2).attr('stroke-dasharray', on ? null : '7 6');
+      wrap(cut(m.n, 44), S.small ? 20 : 20).slice(0, 2).forEach((l, k) => S.text(g, x + 16, y + 34 + k * S.fs(22) * 1.12, l, 22, { weight: 650 }));
+      const lines = (m.u || []).map(u => gl.append('path').attr('fill', 'none').attr('stroke', GOLD).attr('stroke-width', 2.4)
+        .attr('d', `M${x + (w - 18) / 2},${y + rh - 16} C${x + (w - 18) / 2},${fy - 120} ${fx(String(u))},${fy - 150} ${fx(String(u))},${fy - 32}`));
+      return { g, r, lines };
+    });
+    return {
+      frame(p) {
+        const n = tiles.length || 1, a = seg(p, 0, 0.25), k = p >= 1 ? -1 : Math.min(n - 1, Math.floor(clamp((p - 0.22) / 0.76) * n));
+        tiles.forEach((o, i) => {
+          o.g.attr('opacity', seg(a, i / n * 0.8, i / n * 0.8 + 0.2));
+          o.r.attr('stroke-width', i === k ? 4.5 : 2).attr('fill', i === k ? '#0b2a52' : DEEP);
+          o.lines.forEach(l => l.attr('opacity', i === k ? 0.95 : p >= 1 ? 0.22 : 0));
+        });
+      },
+      stop() {},
+    };
+  };
+
+  /* ---------------------------------------------------------------- the fields of application: a matrix that takes a new row */
+  NS.felder = function (el, step, ctx) {
+    const S = stage(el, ctx, 'felder'), svg = S.svg, T = S.T, fn = S.U.chapters || [];
+    const fs0 = (S.U.fields || []), rowsD = (S.small ? fs0.slice(0, 4) : fs0.slice(0, 8)).concat([{ n: S.U.newField || '', b: [1, 2, 3], u: [4, 5, 6, 7], neu: true }]);
+    const x0 = S.small ? 620 : 560, x1 = 1170, y0 = 150, rh = Math.min(S.small ? 92 : 56, 500 / rowsD.length);
+    const cx = d3.scalePoint().domain(fn.map(c => String(c.num))).range([x0, x1]);
+    fn.forEach(c => S.text(svg, cx(String(c.num)), y0 - 26, String(c.num), 28, { font: DISPLAY, anchor: 'middle', fill: GOLD, weight: 560 }));
+    const rows = rowsD.map((f, i) => {
+      const y = y0 + i * rh + rh / 2, g = svg.append('g');
+      if (f.neu) g.append('rect').attr('x', 70).attr('y', y - rh / 2 + 3).attr('width', 1140).attr('height', rh - 6).attr('rx', 8).attr('fill', 'none').attr('stroke', GOLD).attr('stroke-width', 2.4).attr('stroke-dasharray', '9 7');
+      S.text(g, 90, y + S.fs(24) * 0.34, cut(f.n, S.small ? 22 : 34), 24, { weight: 650, fill: f.neu ? GOLD : PAPER, italic: !!f.neu });
+      const marks = fn.map(c => {
+        const k = Number(c.num), b = (f.b || []).includes(k), u = (f.u || []).includes(k);
+        if (!b && !u) return null;
+        return b ? g.append('rect').attr('x', -10).attr('y', -10).attr('width', 20).attr('height', 20).attr('fill', GOLD).attr('transform', `translate(${cx(String(c.num))},${y}) rotate(45)`)
+                 : g.append('circle').attr('cx', cx(String(c.num))).attr('cy', y).attr('r', 8).attr('fill', PAPER);
+      });
+      return { g, marks, neu: !!f.neu };
+    });
+    return {
+      frame(p) {
+        const n = rows.length;
+        rows.forEach((o, i) => {
+          const a = o.neu ? 0.72 : 0.04 + (i / n) * 0.6;
+          o.g.attr('opacity', seg(p, a, a + 0.14));
+          o.marks.forEach((m, k) => { if (m) m.attr('opacity', seg(p, a + 0.05 + k * 0.02, a + 0.16 + k * 0.02)); });
+        });
+      },
+      stop() {},
+    };
+  };
+
+  /* ---------------------------------------------------------------- 4 Begründen und Prüfen (was II Validierung): every part of a statement bound to the wording */
   NS.beleg = function (el, step, ctx) {
     const S = stage(el, ctx, 'beleg'), svg = S.svg, T = S.T, card = S.U.evidence || {}, ev = card.evidence || {};
     const teile = (ev.teile || []).slice(0, 4), n = teile.length || 1;

@@ -47,8 +47,8 @@
   const stage = document.querySelector('.uv-map-stage');
   const info = document.querySelector('.uv-map-info');
   if (stage) {
-    const R = 222, CORE = 50, NODE = 33, RING = [57, 75], CAP = 12;
-    const svg = d3.select(stage).append('svg').attr('viewBox', '-360 -360 720 720').attr('aria-hidden', 'true').attr('focusable', 'false');
+    const R = 214, CORE = 50, NODE = 32, RING = [52, 68], CAP = 12, RF = 356;
+    const svg = d3.select(stage).append('svg').attr('viewBox', '-392 -392 784 784').attr('aria-hidden', 'true').attr('focusable', 'false');
     const ch = U.chapters.map((c, i) => {
       const a = -Math.PI / 2 + i * TAU / U.chapters.length;
       return Object.assign({}, c, { i, a, x: R * Math.cos(a), y: R * Math.sin(a) });
@@ -63,6 +63,8 @@
     });
 
     svg.append('circle').attr('class', 'uv-orbit').attr('r', R);
+    svg.append('circle').attr('class', 'uv-fring').attr('r', RF);
+    const gFl = svg.append('g');
     const gLinks = svg.append('g'), gPath = svg.append('g'), gSats = svg.append('g'), gPulse = svg.append('g'), gNodes = svg.append('g'), gCore = svg.append('g');
 
     const links = gLinks.selectAll('line').data(ch).join('line').attr('class', 'uv-link');
@@ -83,6 +85,30 @@
     nodes.append('text').attr('class', 'num').attr('dy', '0.36em').text(c => c.num);
     const names = nodes.append('text').attr('class', 'name').text(c => c.name);
 
+    // the fields of application on the outer ring: a field brings some functions (gold) and uses others (white)
+    const byNum = {}; ch.forEach(c => { byNum[String(c.num)] = c; });
+    const fl = (U.fields || []).map((f, i, all) => {
+      const a = -Math.PI / 2 + i * TAU / all.length;        // between the labels of the functions
+      return Object.assign({}, f, { i, a, x: RF * Math.cos(a), y: RF * Math.sin(a) });
+    });
+    const flinks = [];
+    fl.forEach(f => [['b', f.b], ['u', f.u]].forEach(([k, ns]) => (ns || []).forEach(n => {
+      const c = byNum[String(n)]; if (!c) return;
+      const mx = (f.x + c.x) / 2 * 0.86, my = (f.y + c.y) / 2 * 0.86;
+      flinks.push({ f, k, el: gFl.append('path').attr('class', 'uv-flink ' + k).attr('d', `M${f.x},${f.y} Q${mx},${my} ${c.x},${c.y}`) });
+    })));
+    const gF = svg.append('g');
+    const fields = gF.selectAll('a').data(fl).join('a').attr('href', '#felder').attr('aria-label', f => U.t.field + ': ' + f.n);
+    fields.append('rect').attr('class', f => 'uv-field s-' + (f.s || 'none')).attr('x', -9).attr('y', -9).attr('width', 18).attr('height', 18)
+      .attr('transform', f => `translate(${f.x},${f.y}) rotate(45)`);
+    let picked = null, hover = false;
+    const pick = f => {
+      picked = f;
+      fields.selectAll('rect').classed('on', d => f && d.i === f.i);
+      flinks.forEach(l => l.el.style('opacity', f && l.f.i === f.i ? (l.k === 'b' ? 0.95 : 0.55) : 0));
+      nodes.classed('on', c => !!f && (f.b || []).concat(f.u || []).map(String).includes(String(c.num)));
+    };
+
     gCore.append('circle').attr('class', 'uv-core-glow').attr('r', CORE + 26);
     gCore.append('circle').attr('class', 'uv-core').attr('r', CORE);
     const coreText = gCore.append('text').attr('class', 'uv-core-t');
@@ -92,9 +118,9 @@
 
     // text sizes in user units follow the rendered width: never below 12 px on the screen
     const fit = () => {
-      const w = stage.clientWidth || 620, k = 720 / w, narrow = w < 520;
+      const w = stage.clientWidth || 620, k = 784 / w, narrow = w < 520;
       names.attr('font-size', Math.max(15, 13 * k)).style('display', narrow ? 'none' : null)
-        .attr('x', c => (RING[1] + 24) * Math.cos(c.a)).attr('y', c => (RING[1] + 24) * Math.sin(c.a))
+        .attr('x', c => (RING[1] + 20) * Math.cos(c.a)).attr('y', c => (RING[1] + 20) * Math.sin(c.a))
         .attr('dy', c => (Math.sin(c.a) > 0.3 ? '0.9em' : Math.sin(c.a) < -0.3 ? '-0.2em' : '0.35em'))
         .attr('text-anchor', c => (Math.cos(c.a) > 0.3 ? 'start' : Math.cos(c.a) < -0.3 ? 'end' : 'middle'));
       nodes.selectAll('text.num').attr('font-size', Math.max(24, 15 * k));
@@ -127,6 +153,12 @@
         const u = on ? ((tt - T_END - c.i * 0.55) / 3.3) % 1 : 0, k = S0 + (S1 - S0) * u;
         d3.select(this).attr('cx', c.x * k).attr('cy', c.y * k).attr('opacity', on ? Math.sin(Math.PI * u) * 0.9 : 0);
       });
+      // the fields come last; then, while nobody points at one, each field in turn shows what it brings and uses
+      fields.attr('opacity', f => ease((tt - T_END - 0.3 - f.i * 0.12) / 0.5));
+      if (!STATIC && !hover && fl.length && tt > T_END + 2) {
+        const f = fl[Math.floor((tt - T_END - 2) / 2.8) % fl.length];
+        if (!picked || picked.i !== f.i) { pick(f); sayField(f); }
+      }
     }
     if (SEEK != null || STATIC) draw(SEEK != null ? SEEK : 1e6);
     else {
@@ -145,14 +177,20 @@
       const parts = Object.keys(U.states).filter(k => c.counts[k]).map(k => c.counts[k] + ' ' + U.states[k]);
       info.innerHTML = '<b>' + U.t.chapter + ' ' + c.num + ' · ' + c.name + '</b> — ' + c.total + ' ' + U.t.components + (parts.length ? ': ' + parts.join(', ') : '');
     };
-    nodes.on('mouseenter focus', (e, c) => say(c)).on('mouseleave blur', () => say(null));
+    const fnNames = ns => (ns || []).map(n => (byNum[String(n)] || {}).name).filter(Boolean).join(', ');
+    function sayField(f) {
+      if (!info || !f) return;
+      info.innerHTML = '<b>' + U.t.field + ' · ' + f.n + '</b> — ' + U.t.brings + ': ' + fnNames(f.b) + ' · ' + U.t.uses + ': ' + fnNames(f.u);
+    }
+    nodes.on('mouseenter focus', (e, c) => { hover = true; pick(null); say(c); }).on('mouseleave blur', () => { hover = false; say(null); });
+    fields.on('mouseenter focus', (e, f) => { hover = true; pick(f); sayField(f); }).on('mouseleave blur', () => { hover = false; });
     say(null);
 
     const legend = document.createElement('ul');
     legend.className = 'uv-map-legend';
     const L = U.states;
     legend.innerHTML = `<li class="l-on"><i></i>${L.laeuft} · ${L.gebaut}</li><li class="l-draft"><i></i>${L.entwurf}</li>` +
-      `<li class="l-out"><i></i>${L.ausbau} · ${L.perspektive}</li><li class="l-reg"><i></i>${U.lang === 'de' ? 'Eintrag eines Registers' : 'entry of a register'}</li>`;
+      `<li class="l-field"><i></i>${U.fieldsLabel || ''}</li><li class="l-out"><i></i>${L.ausbau} · ${L.perspektive}</li><li class="l-reg"><i></i>${U.lang === 'de' ? 'Eintrag eines Registers' : 'entry of a register'}</li>`;
     stage.parentNode.append(legend);
   }
 

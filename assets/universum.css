@@ -148,6 +148,54 @@ main.uv section.band + section.band { border-top: 1px solid var(--line); margin-
 .uv-chip small { font-size: 0.8rem; color: var(--muted); }
 .uv-chip[data-place="netz"], .uv-chip[data-place="none"] { background: transparent; border-style: dashed; }
 
+/* ---------------------------------------------------------------- a function: its question first */
+.uv-tagline { margin: 0.9rem 0 0; font-family: var(--sans); font-weight: 650; font-size: 0.95rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); }
+.uv-frage { margin: 0 0 0.6rem; font-family: var(--display); font-style: italic; font-weight: 460; font-size: clamp(1.3rem, 2.3vw, 1.7rem); line-height: 1.25; color: var(--gold-deep); }
+.uv-ch-title { font-style: normal; font-family: var(--sans); font-size: 0.98rem; color: var(--oxford-soft); }
+.uv-index { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.uv-tile-title { font-style: italic; }
+.uv-account { margin: 1.1rem 0 0; }
+.uv-account .go { margin: 0; }
+
+/* ---------------------------------------------------------------- Famulus Science: modules, each resting on functions */
+.uv-mini-wide { aspect-ratio: 16 / 7; margin: 0.4rem 0 1.4rem; max-height: 30rem; width: 100%; }
+.uv-science .uv-cards { grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr)); }
+.uv-module { border-left-color: var(--oxford); }
+.uv-uses { margin: 0.55rem 0 0; padding-top: 0.45rem; border-top: 1px dotted var(--line-strong); font-family: var(--sans); font-size: 0.82rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0.3rem 0.4rem; align-items: center; }
+.uv-uses b { font-weight: 650; color: var(--ink); margin-right: 0.2rem; }
+.uv-fn { display: inline-flex; align-items: baseline; gap: 0.15rem; padding: 0.05rem 0.5rem; border: 1px solid var(--gold-deep); border-radius: 1rem; color: var(--oxford); text-decoration: none; font-weight: 650; font-size: 0.8rem; background: var(--gold-pale); }
+.uv-fn span { font-weight: 500; }
+.uv-fn:hover { background: var(--oxford); color: #fff; border-color: var(--oxford); }
+.uv-science .uv-go-row { margin-top: 1.3rem; }
+
+/* ---------------------------------------------------------------- fields of application: the matrix field × function */
+.uv-matrix-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; background: var(--paper); border: 1px solid var(--line); border-top: 4px solid var(--oxford); }
+main.uv table.uv-matrix { display: table; width: 100%; min-width: 46rem; border-collapse: collapse; font-family: var(--sans); }
+.uv-matrix th, .uv-matrix td { padding: 0.6rem 0.5rem; border-top: 1px solid var(--line); text-align: center; vertical-align: middle; }
+.uv-matrix thead th { border-top: 0; font-size: 0.8rem; font-weight: 500; color: var(--muted); vertical-align: bottom; }
+.uv-matrix thead th a { display: grid; gap: 0.1rem; justify-items: center; text-decoration: none; color: var(--oxford); }
+.uv-matrix thead th b { font-family: var(--display); font-size: 1.3rem; color: var(--gold-deep); line-height: 1; }
+.uv-matrix thead th span { font-size: 0.8rem; line-height: 1.2; }
+.uv-matrix tbody th, .uv-matrix thead th:first-child { text-align: left; padding-left: 1rem; min-width: 15rem; }
+.uv-matrix tbody th { font-family: var(--display); font-weight: 560; font-size: 1.05rem; color: var(--oxford); }
+.uv-matrix tbody th a { color: var(--oxford); }
+.uv-matrix tbody th small { display: block; margin: 0.1rem 0 0.25rem; font-family: var(--sans); font-weight: 400; font-size: 0.82rem; line-height: 1.3; color: var(--muted); }
+.uv-matrix td { font-size: 1.15rem; line-height: 1; }
+.uv-matrix td.uv-brings, .uv-matrix-key .uv-brings { color: var(--gold-deep); }
+.uv-matrix td.uv-uses-c, .uv-matrix-key .uv-uses-c { color: var(--oxford); }
+.uv-matrix td.uv-brings { background: rgba(196, 161, 90, 0.14); }
+.uv-matrix tr.uv-new th, .uv-matrix tr.uv-new td { border-top: 2px dashed var(--gold-deep); background: repeating-linear-gradient(135deg, transparent 0 7px, rgba(140, 109, 42, 0.06) 7px 14px); }
+.uv-matrix tr.uv-new th { font-style: italic; }
+.uv-matrix-key { margin: 0.6rem 0 0; font-family: var(--sans); font-size: 0.86rem; color: var(--muted); }
+.uv-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.uv-field { fill: #00152e; stroke: #d9d2c2; stroke-width: 1.6; cursor: pointer; }
+.uv-field.s-entwurf, .uv-field.s-ausbau { stroke-dasharray: 3 2.5; }
+.uv-field.on, .uv-field:hover { fill: var(--gold); stroke: #fffdf8; }
+.uv-flink { fill: none; stroke: #fffdf8; stroke-width: 1.4; opacity: 0; }
+.uv-flink.b { stroke: var(--gold); stroke-width: 2.2; }
+.uv-fring { fill: none; stroke: rgba(217, 210, 194, 0.28); stroke-width: 1; stroke-dasharray: 2 6; }
+.uv-map-legend .l-field i { border-radius: 0; transform: rotate(45deg); border-color: #d9d2c2; }
+
 /* ---------------------------------------------------------------- the foundation: what is built, what comes next */
 .uv-foundation .uv-built { margin: 0 0 0.4rem; max-width: 52rem; font-family: var(--display); font-size: clamp(1.25rem, 2.2vw, 1.6rem); line-height: 1.36; color: var(--oxford); }
 .uv-found-figs .uv-open { background: repeating-linear-gradient(135deg, transparent 0 7px, rgba(140, 109, 42, 0.07) 7px 14px); }
@@ -182,7 +230,8 @@ main.uv section.band + section.band { border-top: 1px solid var(--line); margin-
 @media (max-width: 1020px) {
   .uv-hero-grid { grid-template-columns: 1fr; }
   .uv-map-stage { max-width: 560px; }
-  .uv-index { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .uv-index { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .uv-mini-wide { aspect-ratio: 16 / 10; }
   .uv-ch-body { grid-template-columns: 1fr; }
 }
 @media (max-width: 680px) {

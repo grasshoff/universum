@@ -5,9 +5,9 @@
   1280,
   800
  ],
- "captured": "2026-11-11T14:12:22",
+ "captured": "2026-11-16T10:07:15",
  "title": "From the WWW to the WWK",
- "lead": "The path of a statement in seven acts: from the address of a passage to the knowledge network.",
+ "lead": "Seven functions, many fields: from the address of a passage to the knowledge network.",
  "steps": [
   {
    "id": "web",
@@ -147,6 +147,32 @@
    }
   },
   {
+   "id": "belege",
+   "frame": null,
+   "pre": null,
+   "caption": "For validation only the grounding evidence counts. Every kind of evidence has its address: sentence, figure, object, register entry and the single cell of a table.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 12,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "belege",
+   "data": {},
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "For validation only the grounding evidence counts. Every kind of evidence has its address: sentence, figure, object, register entry and the single cell of a table."
+    ]
+   }
+  },
+  {
    "id": "edition",
    "frame": "frames/edition.webp",
    "pre": null,
@@ -166,6 +192,123 @@
    "tour": true,
    "cards": [],
    "url": "https://famulus.lettre.ai/euler/eulerOO/978-3-0348-0892-7?p=14"
+  },
+  {
+   "id": "sprache",
+   "frame": null,
+   "pre": null,
+   "caption": "The rules of usage are registered, citable and revisable – relative to author, work and time.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 12,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "sprache",
+   "data": {},
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "The rules of usage are registered, citable and revisable – relative to author, work and time."
+    ]
+   }
+  },
+  {
+   "id": "woerterbuch",
+   "frame": "frames/woerterbuch.webp",
+   "pre": null,
+   "caption": "A term leads to its entry: its senses in the usage of the collection, with the attested passages.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": [
+    0.0125,
+    0.08,
+    0.4688,
+    0.9
+   ],
+   "zoom": null,
+   "chrome": true,
+   "hold": 8,
+   "tour": true,
+   "cards": [],
+   "url": "https://famulus.lettre.ai/euler/eulerOO/978-3-0348-0892-7?p=433"
+  },
+  {
+   "id": "instrumente",
+   "frame": null,
+   "pre": null,
+   "caption": "The Famulus experts form a system of supplementing skills: tables, calculations, models, sky and time. Each commands one instrument of reasoning.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 12,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "instrumente",
+   "data": {},
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "The Famulus experts form a system of supplementing skills: tables, calculations, models, sky and time. Each commands one instrument of reasoning."
+    ]
+   }
+  },
+  {
+   "id": "gemessen",
+   "frame": null,
+   "pre": null,
+   "caption": "Certified means measured: every computation is checked against documented comparisons.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 11,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "experte",
+   "data": {
+    "phase": 2
+   },
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Certified means measured: every computation is checked against documented comparisons."
+    ]
+   }
+  },
+  {
+   "id": "katalog",
+   "frame": "frames/katalog.webp",
+   "pre": null,
+   "caption": "One catalogue lists for each expert its domain, status, measured comparisons and gaps.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": true,
+   "hold": 8,
+   "tour": true,
+   "cards": [],
+   "url": "https://famulus.lettre.ai/experts/"
   },
   {
    "id": "evidenz",
@@ -256,78 +399,6 @@
      "Missing evidence justifies nothing and refutes nothing"
     ]
    }
-  },
-  {
-   "id": "experten",
-   "frame": null,
-   "pre": null,
-   "caption": "Famulus experts are services with certified knowledge of a domain.",
-   "key": [],
-   "target": null,
-   "clicks": 0,
-   "focus": null,
-   "zoom": null,
-   "chrome": false,
-   "hold": 9,
-   "tour": true,
-   "cards": [],
-   "url": null,
-   "kind": "scene",
-   "scene": "experte",
-   "data": {
-    "phase": 1
-   },
-   "card": {
-    "kicker": "Famulus",
-    "title": "",
-    "lines": [
-     "Famulus experts are services with certified knowledge of a domain."
-    ]
-   }
-  },
-  {
-   "id": "gemessen",
-   "frame": null,
-   "pre": null,
-   "caption": "Certified means measured: every computation is checked against documented comparisons.",
-   "key": [],
-   "target": null,
-   "clicks": 0,
-   "focus": null,
-   "zoom": null,
-   "chrome": false,
-   "hold": 11,
-   "tour": true,
-   "cards": [],
-   "url": null,
-   "kind": "scene",
-   "scene": "experte",
-   "data": {
-    "phase": 2
-   },
-   "card": {
-    "kicker": "Famulus",
-    "title": "",
-    "lines": [
-     "Certified means measured: every computation is checked against documented comparisons."
-    ]
-   }
-  },
-  {
-   "id": "katalog",
-   "frame": "frames/katalog.webp",
-   "pre": null,
-   "caption": "One catalogue lists for each expert its domain, status, measured comparisons and gaps.",
-   "key": [],
-   "target": null,
-   "clicks": 0,
-   "focus": null,
-   "zoom": null,
-   "chrome": true,
-   "hold": 8,
-   "tour": true,
-   "cards": [],
-   "url": "https://famulus.lettre.ai/experts/"
   },
   {
    "id": "notebook",
@@ -498,6 +569,74 @@
    }
   },
   {
+   "id": "science",
+   "frame": null,
+   "pre": null,
+   "caption": "Famulus Science: modules that accompany the working process of research. Each rests on the seven functions.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 14,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "science",
+   "data": {},
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "Famulus Science: modules that accompany the working process of research. Each rests on the seven functions."
+    ]
+   }
+  },
+  {
+   "id": "science-seite",
+   "frame": "frames/science-seite.webp",
+   "pre": null,
+   "caption": "From the research question to the publication: Famulus for science and research.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": true,
+   "hold": 8,
+   "tour": true,
+   "cards": [],
+   "url": "https://famulus.lettre.ai/famulus-science/"
+  },
+  {
+   "id": "felder",
+   "frame": null,
+   "pre": null,
+   "caption": "A field of application is a combination of the functions. A new field brings its own holdings, its own rules of language and its own experts; everything else is there.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 14,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "scene",
+   "scene": "felder",
+   "data": {},
+   "card": {
+    "kicker": "Famulus",
+    "title": "",
+    "lines": [
+     "A field of application is a combination of the functions. A new field brings its own holdings, its own rules of language and its own experts; everything else is there."
+    ]
+   }
+  },
+  {
    "id": "fundament",
    "frame": null,
    "pre": null,
@@ -514,7 +653,7 @@
    "url": null,
    "kind": "card",
    "card": {
-    "kicker": "As of 11 November 2026",
+    "kicker": "As of 16 November 2026",
     "title": "The foundation is in place",
     "figures": [
      {
@@ -522,7 +661,7 @@
       "k": "collections with addresses"
      },
      {
-      "v": "34",
+      "v": "35",
       "k": "namespaces in the own register"
      },
      {

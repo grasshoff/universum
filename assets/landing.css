@@ -1026,3 +1026,18 @@ article.band h3 { margin: 0.15rem 0 0.3rem; font-size: 1rem; line-height: 1.3; o
 .band-pdf { margin-top: auto; align-self: start; padding: 0.35rem 0.7rem; font-family: var(--sans); font-size: 0.82rem; font-weight: 600; color: var(--paper); background: var(--oxford); border-radius: 2px; text-decoration: none; }
 .band-pdf:hover, .band-pdf:focus-visible { background: var(--gold-deep); color: var(--paper); }
 @media (max-width: 680px) { .baende { grid-template-columns: 1fr; } }
+
+/* ---------------------------------------------------------------- supplements */
+.supps { list-style: none; margin: 0.4rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.9rem 1.2rem; }
+.supp { display: grid; grid-template-columns: 3.2rem 1fr; gap: 0.8rem; background: var(--paper); border: 1px solid var(--line); padding: 0.85rem 0.95rem; }
+.supp .sn { font-family: var(--display); font-weight: 560; font-size: 1.7rem; line-height: 1; color: var(--gold-deep); letter-spacing: -0.03em; }
+.supp h3 { margin: 0; font-family: var(--display); font-weight: 560; font-size: 1.02rem; line-height: 1.25; }
+.supp h3 a { text-decoration: none; }
+.supp h3 a:hover { text-decoration: underline; }
+.supp .sub { margin: 0.2rem 0 0; font-family: var(--sans); font-size: 0.8rem; color: var(--muted); }
+.supp .sup { margin: 0.45rem 0 0; font-family: var(--sans); font-size: 0.8rem; }
+.supp .sup b { color: var(--oxford); }
+.supp details { margin-top: 0.4rem; font-family: var(--sans); font-size: 0.82rem; }
+.supp summary { cursor: pointer; color: var(--gold-deep); font-weight: 650; }
+.supp details p { margin: 0.35rem 0 0; line-height: 1.4; }
+@media (max-width: 1020px) { .supps { grid-template-columns: 1fr; } }
