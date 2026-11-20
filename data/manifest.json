@@ -183,11 +183,11 @@
    "source": "publication/famulus-lettre/series.yaml series[]"
   },
   "papers_typeset": {
-   "value": 41,
+   "value": 48,
    "source": "data/arxiv/papers.json papers[] with stage gesetzt"
   },
   "papers_pages": {
-   "value": 866,
+   "value": 1182,
    "source": "data/arxiv/papers.json pages of the typeset papers"
   },
   "mcp_servers": {
