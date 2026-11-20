@@ -135,9 +135,12 @@ main.uv section.band + section.band { border-top: 1px solid var(--line); margin-
 .uv-st-gebaut { background: var(--gold-deep); border-color: var(--gold-deep); color: #fff; }
 .uv-st-entwurf { background: transparent; color: var(--oxford); }
 .uv-st-ausbau { background: transparent; color: var(--muted); border-color: var(--muted); border-style: dashed; }
+.uv-st-teilweise { background: transparent; color: var(--gold-deep); border-color: var(--gold-deep); }
 .uv-st-perspektive { background: transparent; color: var(--gold-deep); border-color: var(--gold-deep); border-style: dashed; }
 .uv-pl { font-family: var(--sans); font-size: 0.78rem; color: var(--muted); white-space: nowrap; }
 .uv-pl-public { color: var(--gold-deep); font-weight: 650; }
+.uv-kind { color: var(--muted); font-weight: 500; margin-right: 0.45rem; }
+.uv-kind::after { content: " ·"; }
 .uv-pl-public::after { content: " \2197"; }
 
 .uv-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.45rem; }
@@ -152,10 +155,24 @@ main.uv section.band + section.band { border-top: 1px solid var(--line); margin-
 .uv-tagline { margin: 0.9rem 0 0; font-family: var(--sans); font-weight: 650; font-size: 0.95rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); }
 .uv-frage { margin: 0 0 0.6rem; font-family: var(--display); font-style: italic; font-weight: 460; font-size: clamp(1.3rem, 2.3vw, 1.7rem); line-height: 1.25; color: var(--gold-deep); }
 .uv-ch-title { font-style: normal; font-family: var(--sans); font-size: 0.98rem; color: var(--oxford-soft); }
-.uv-index { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.uv-index { grid-template-columns: repeat(8, minmax(0, 1fr)); }
 .uv-tile-title { font-style: italic; }
 .uv-account { margin: 1.1rem 0 0; }
 .uv-account .go { margin: 0; }
+
+/* ---------------------------------------------------------------- a function: definition, criterion, limit; its stages */
+.uv-def { margin: 0.2rem 0 0; display: grid; grid-template-columns: 7.2rem minmax(0, 1fr); gap: 0.55rem 1rem; max-width: 46rem; }
+.uv-def dt { margin: 0; padding-top: 0.15rem; font-family: var(--sans); font-size: 0.8rem; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold-deep); }
+.uv-def dd { margin: 0; font-size: 1.02rem; line-height: 1.5; }
+.uv-def dd:first-of-type { font-size: 1.08rem; }
+.uv-stages { padding: 0 1.7rem 1.2rem; }
+.uv-stages h4 { margin: 0 0 0.5rem; font-family: var(--sans); font-size: 0.82rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--oxford); font-weight: 650; }
+.uv-stage-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.uv-stage-list li { display: grid; grid-template-columns: 2.6rem 15rem auto minmax(0, 1fr); gap: 0.2rem 0.8rem; align-items: baseline; padding: 0.45rem 0; border-bottom: 1px solid var(--line); }
+.uv-sg-id { font-family: var(--display); font-size: 1rem; color: var(--gold-deep); }
+.uv-sg-name { font-family: var(--sans); font-weight: 650; font-size: 0.92rem; color: var(--oxford); }
+.uv-sg-out { font-size: 0.92rem; line-height: 1.4; color: var(--ink); }
+.uv-group h4 .uv-st { margin-left: 0.3rem; text-transform: none; letter-spacing: 0; }
 
 /* ---------------------------------------------------------------- Famulus Science: modules, each resting on functions */
 .uv-mini-wide { aspect-ratio: 16 / 7; margin: 0.4rem 0 1.4rem; max-height: 30rem; width: 100%; }
@@ -231,6 +248,8 @@ main.uv table.uv-matrix { display: table; width: 100%; min-width: 46rem; border-
   .uv-hero-grid { grid-template-columns: 1fr; }
   .uv-map-stage { max-width: 560px; }
   .uv-index { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .uv-stage-list li { grid-template-columns: 2.6rem minmax(0, 1fr) auto; }
+  .uv-sg-out { grid-column: 2 / -1; }
   .uv-mini-wide { aspect-ratio: 16 / 10; }
   .uv-ch-body { grid-template-columns: 1fr; }
 }
@@ -250,5 +269,8 @@ main.uv table.uv-matrix { display: table; width: 100%; min-width: 46rem; border-
   .uv-tally { margin-left: 0; width: 100%; }
   .uv-group { padding: 0.4rem 1.1rem 1rem; }
   .uv-cards { grid-template-columns: 1fr; }
+  .uv-def { grid-template-columns: 1fr; gap: 0.15rem; }
+  .uv-def dd { margin-bottom: 0.5rem; }
+  .uv-stages { padding: 0 1.1rem 1rem; }
 }
 @media (prefers-reduced-motion: reduce) { .uv-tile, .uv-node circle { transition: none; } }

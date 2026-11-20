@@ -5,9 +5,9 @@
   1280,
   800
  ],
- "captured": "2026-11-16T10:07:15",
+ "captured": "2026-11-20T20:39:48",
  "title": "Vom WWW zum WWK",
- "lead": "Sieben Funktionen, viele Felder: von der Adresse einer Stelle bis in das Wissensnetz.",
+ "lead": "Acht Funktionen; jedes Anwendungsfeld nutzt die Funktionen, die es braucht.",
  "steps": [
   {
    "id": "web",
@@ -160,7 +160,7 @@
    "id": "belege",
    "frame": null,
    "pre": null,
-   "caption": "Für die Validierung zählt nur die Grounding-Evidenz. Jede Art von Beleg hat ihre Adresse: Satz, Abbildung, Objekt, Registereintrag und die einzelne Zelle einer Tafel.",
+   "caption": "Für die Validierung zählt nur die Grundlagenevidenz. Jede Art von Beleg hat ihre Adresse: Satz, Abbildung, Objekt, Registereintrag und die einzelne Zelle einer Tafel.",
    "key": [],
    "target": null,
    "clicks": 0,
@@ -178,11 +178,11 @@
     "kicker": "Famulus",
     "title": "",
     "lines": [
-     "Für die Validierung zählt nur die Grounding-Evidenz. Jede Art von Beleg hat ihre Adresse: Satz, Abbildung, Objekt, Registereintrag und die einzelne Zelle einer Tafel."
+     "Für die Validierung zählt nur die Grundlagenevidenz. Jede Art von Beleg hat ihre Adresse: Satz, Abbildung, Objekt, Registereintrag und die einzelne Zelle einer Tafel."
     ]
    },
    "audio": "voice/belege.m4a",
-   "audio_s": 14.12
+   "audio_s": 14.65
   },
   {
    "id": "edition",
@@ -405,7 +405,7 @@
    "id": "validiert",
    "frame": null,
    "pre": null,
-   "caption": "Was die Belege nicht tragen, wird als nicht validiert ausgewiesen. Das ist kein Urteil über Falschheit.",
+   "caption": "Eine Aussage, die aus den Belegen nicht folgt, wird als nicht validiert ausgewiesen. Das ist kein Urteil über Falschheit.",
    "key": [],
    "target": null,
    "clicks": 0,
@@ -418,15 +418,15 @@
    "url": null,
    "kind": "card",
    "card": {
-    "kicker": "II · Validierung",
+    "kicker": "4 · Begründen und Prüfen",
     "title": "„Nicht validiert“ heißt nicht „falsch“",
     "lines": [
-     "Ein Satz ist sachlich validiert, wenn seine Aussagen aus registrierten Belegen folgen",
+     "Ein Satz ist genau dann sachlich validiert, wenn seine Aussagen aus den Aussagen registrierter Belege folgen",
      "Ein fehlender Beleg rechtfertigt nichts und widerlegt nichts"
     ]
    },
    "audio": "voice/validiert.m4a",
-   "audio_s": 11.87
+   "audio_s": 13.01
   },
   {
    "id": "notebook",
@@ -473,6 +473,34 @@
    "url": "https://famulus.lettre.ai/notebook/",
    "audio": "voice/notebook-seite.m4a",
    "audio_s": 5.89
+  },
+  {
+   "id": "beschreiben",
+   "frame": null,
+   "pre": null,
+   "caption": "Beschreiben fasst ein gerechtfertigtes Ergebnis in Wortlaut und Form. Es fügt keine Aussage hinzu, die nicht gerechtfertigt ist.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 13,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "card",
+   "card": {
+    "kicker": "6 · Beschreiben",
+    "title": "Wie wird ein Ergebnis in Wort und Form gefasst?",
+    "lines": [
+     "Verstehen geht nach Gebrauchsregeln vom Wortlaut zur Aussage",
+     "Beschreiben geht nach Kompositionsregeln von der Aussage zum Wortlaut",
+     "Jedes Darstellungselement liest seine Zahlen aus adressierten Daten"
+    ]
+   },
+   "audio": "voice/beschreiben.m4a",
+   "audio_s": 21.77
   },
   {
    "id": "siegel",
@@ -614,7 +642,7 @@
    "id": "science",
    "frame": null,
    "pre": null,
-   "caption": "Famulus Science: Module, die den Arbeitsprozess der Forschung begleiten. Jedes ruht auf den sieben Funktionen.",
+   "caption": "Famulus Science: Module, die den Arbeitsprozess der Forschung unterstützen. Jedes Modul nutzt einige der acht Funktionen.",
    "key": [],
    "target": null,
    "clicks": 0,
@@ -632,11 +660,11 @@
     "kicker": "Famulus",
     "title": "",
     "lines": [
-     "Famulus Science: Module, die den Arbeitsprozess der Forschung begleiten. Jedes ruht auf den sieben Funktionen."
+     "Famulus Science: Module, die den Arbeitsprozess der Forschung unterstützen. Jedes Modul nutzt einige der acht Funktionen."
     ]
    },
    "audio": "voice/science.m4a",
-   "audio_s": 10.2
+   "audio_s": 10.39
   },
   {
    "id": "science-seite",
@@ -660,7 +688,7 @@
    "id": "felder",
    "frame": null,
    "pre": null,
-   "caption": "Ein Anwendungsfeld ist eine Kombination der Funktionen. Ein neues Feld bringt eigene Bestände, eigene Sprachregeln und eigene Experten mit; alles Übrige ist da.",
+   "caption": "Ein Anwendungsfeld nutzt eine Auswahl der Funktionen. Ein neues Feld bringt eigene Bestände, eigene Gebrauchsregeln und eigene Experten ein; die übrigen Funktionen stehen mit dem Stand ihrer Stufen zur Verfügung.",
    "key": [],
    "target": null,
    "clicks": 0,
@@ -678,11 +706,11 @@
     "kicker": "Famulus",
     "title": "",
     "lines": [
-     "Ein Anwendungsfeld ist eine Kombination der Funktionen. Ein neues Feld bringt eigene Bestände, eigene Sprachregeln und eigene Experten mit; alles Übrige ist da."
+     "Ein Anwendungsfeld nutzt eine Auswahl der Funktionen. Ein neues Feld bringt eigene Bestände, eigene Gebrauchsregeln und eigene Experten ein; die übrigen Funktionen stehen mit dem Stand ihrer Stufen zur Verfügung."
     ]
    },
    "audio": "voice/felder.m4a",
-   "audio_s": 13.11
+   "audio_s": 15.94
   },
   {
    "id": "fundament",
@@ -701,8 +729,8 @@
    "url": null,
    "kind": "card",
    "card": {
-    "kicker": "Stand 16.11.2026",
-    "title": "Das Fundament steht",
+    "kicker": "Stand 20.11.2026",
+    "title": "Was gebaut ist",
     "figures": [
      {
       "v": "29",
@@ -717,7 +745,7 @@
       "k": "Hefte der Reihe Famulus Expertise"
      },
      {
-      "v": "11",
+      "v": "12",
       "k": "Schnittstellen für Agenten"
      }
     ],
@@ -727,7 +755,7 @@
     ]
    },
    "audio": "voice/fundament.m4a",
-   "audio_s": 15.49
+   "audio_s": 12.84
   }
  ],
  "voice": {

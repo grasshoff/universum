@@ -179,7 +179,7 @@
    "source": "publication/famulus-lettre/series.yaml issues[].release (the seal presupposes the author's release of a version)"
   },
   "subseries": {
-   "value": 3,
+   "value": 4,
    "source": "publication/famulus-lettre/series.yaml series[]"
   },
   "papers_typeset": {
@@ -191,11 +191,11 @@
    "source": "data/arxiv/papers.json pages of the typeset papers"
   },
   "mcp_servers": {
-   "value": 11,
+   "value": 12,
    "source": "platform/registry/mcp/*/mcp.yaml without tier privat"
   },
   "mcp_tools_listed": {
-   "value": 98,
+   "value": 106,
    "source": "platform/registry/mcp/*/mcp.yaml tools[] (only where the registry lists them)"
   },
   "canon_laeuft": {
@@ -208,6 +208,10 @@
   },
   "canon_entwurf": {
    "value": 3,
+   "source": "platform/docs/famulus.qmd, table \"Bestandteile und Stand\""
+  },
+  "canon_teilweise": {
+   "value": 0,
    "source": "platform/docs/famulus.qmd, table \"Bestandteile und Stand\""
   },
   "canon_ausbau": {
@@ -223,15 +227,15 @@
    "source": "platform/docs/famulus.qmd front matter"
   },
   "asof_iso": {
-   "value": "2026-11-16",
+   "value": "2026-11-20",
    "source": "date of this collection run"
   },
   "asof_de": {
-   "value": "16.11.2026",
+   "value": "20.11.2026",
    "source": "date of this collection run"
   },
   "asof_en": {
-   "value": "16 November 2026",
+   "value": "20 November 2026",
    "source": "date of this collection run"
   }
  },

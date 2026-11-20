@@ -5,9 +5,9 @@
   1280,
   800
  ],
- "captured": "2026-11-16T10:07:15",
+ "captured": "2026-11-20T20:39:48",
  "title": "From the WWW to the WWK",
- "lead": "Seven functions, many fields: from the address of a passage to the knowledge network.",
+ "lead": "Eight functions; every field of application uses the functions it needs.",
  "steps": [
   {
    "id": "web",
@@ -69,7 +69,7 @@
    "id": "titel",
    "frame": null,
    "pre": null,
-   "caption": "Famulus carries this thought over to knowledge: what is connected is statements with their justifications.",
+   "caption": "Famulus applies this idea to knowledge: what is connected is propositions with their justifications.",
    "key": [],
    "target": null,
    "clicks": 0,
@@ -150,7 +150,7 @@
    "id": "belege",
    "frame": null,
    "pre": null,
-   "caption": "For validation only the grounding evidence counts. Every kind of evidence has its address: sentence, figure, object, register entry and the single cell of a table.",
+   "caption": "For validation only primary evidence counts. Every kind of evidence has its address: sentence, figure, object, register entry and the single cell of a table.",
    "key": [],
    "target": null,
    "clicks": 0,
@@ -168,7 +168,7 @@
     "kicker": "Famulus",
     "title": "",
     "lines": [
-     "For validation only the grounding evidence counts. Every kind of evidence has its address: sentence, figure, object, register entry and the single cell of a table."
+     "For validation only primary evidence counts. Every kind of evidence has its address: sentence, figure, object, register entry and the single cell of a table."
     ]
    }
   },
@@ -270,7 +270,7 @@
    "id": "gemessen",
    "frame": null,
    "pre": null,
-   "caption": "Certified means measured: every computation is checked against documented comparisons.",
+   "caption": "Checked means measured: every computation is checked against documented comparisons.",
    "key": [],
    "target": null,
    "clicks": 0,
@@ -290,7 +290,7 @@
     "kicker": "Famulus",
     "title": "",
     "lines": [
-     "Certified means measured: every computation is checked against documented comparisons."
+     "Checked means measured: every computation is checked against documented comparisons."
     ]
    }
   },
@@ -379,7 +379,7 @@
    "id": "validiert",
    "frame": null,
    "pre": null,
-   "caption": "What the evidence does not carry is marked as not validated. That is no verdict of falsity.",
+   "caption": "A proposition that does not follow from the evidence is marked as not validated. That is no verdict of falsity.",
    "key": [],
    "target": null,
    "clicks": 0,
@@ -392,10 +392,10 @@
    "url": null,
    "kind": "card",
    "card": {
-    "kicker": "II · Validation",
+    "kicker": "4 · Justifying and checking",
     "title": "“Not validated” does not mean “false”",
     "lines": [
-     "A sentence is factually validated when its propositions follow from registered grounds",
+     "A sentence is factually validated if and only if its propositions follow from the propositions of registered evidence",
      "Missing evidence justifies nothing and refutes nothing"
     ]
    }
@@ -441,6 +441,32 @@
    "tour": true,
    "cards": [],
    "url": "https://famulus.lettre.ai/notebook/"
+  },
+  {
+   "id": "beschreiben",
+   "frame": null,
+   "pre": null,
+   "caption": "Describing puts a justified result into wording and form. It adds no proposition that is not justified.",
+   "key": [],
+   "target": null,
+   "clicks": 0,
+   "focus": null,
+   "zoom": null,
+   "chrome": false,
+   "hold": 13,
+   "tour": true,
+   "cards": [],
+   "url": null,
+   "kind": "card",
+   "card": {
+    "kicker": "6 · Describing",
+    "title": "How is a result put into words and forms?",
+    "lines": [
+     "Understanding goes by rules of use from wording to proposition",
+     "Describing goes by rules of composition from proposition to wording",
+     "Every presentation element reads its numbers from addressed data"
+    ]
+   }
   },
   {
    "id": "siegel",
@@ -516,7 +542,7 @@
    "id": "netz",
    "frame": null,
    "pre": null,
-   "caption": "What is connected is not documents but statements with their justifications. Reference points of other institutions are future work.",
+   "caption": "What is connected is not documents but propositions with their justifications. Reference points of other institutions are not yet built.",
    "key": [],
    "target": null,
    "clicks": 0,
@@ -536,7 +562,7 @@
     "kicker": "Famulus",
     "title": "",
     "lines": [
-     "What is connected is not documents but statements with their justifications. Reference points of other institutions are future work."
+     "What is connected is not documents but propositions with their justifications. Reference points of other institutions are not yet built."
     ]
    }
   },
@@ -572,7 +598,7 @@
    "id": "science",
    "frame": null,
    "pre": null,
-   "caption": "Famulus Science: modules that accompany the working process of research. Each rests on the seven functions.",
+   "caption": "Famulus Science: modules that support the working process of research. Every module uses some of the eight functions.",
    "key": [],
    "target": null,
    "clicks": 0,
@@ -590,7 +616,7 @@
     "kicker": "Famulus",
     "title": "",
     "lines": [
-     "Famulus Science: modules that accompany the working process of research. Each rests on the seven functions."
+     "Famulus Science: modules that support the working process of research. Every module uses some of the eight functions."
     ]
    }
   },
@@ -614,7 +640,7 @@
    "id": "felder",
    "frame": null,
    "pre": null,
-   "caption": "A field of application is a combination of the functions. A new field brings its own holdings, its own rules of language and its own experts; everything else is there.",
+   "caption": "A field of application uses a selection of the functions. A new field contributes its own holdings, its own rules of use and its own experts; the other functions are available at the state of their stages.",
    "key": [],
    "target": null,
    "clicks": 0,
@@ -632,7 +658,7 @@
     "kicker": "Famulus",
     "title": "",
     "lines": [
-     "A field of application is a combination of the functions. A new field brings its own holdings, its own rules of language and its own experts; everything else is there."
+     "A field of application uses a selection of the functions. A new field contributes its own holdings, its own rules of use and its own experts; the other functions are available at the state of their stages."
     ]
    }
   },
@@ -653,8 +679,8 @@
    "url": null,
    "kind": "card",
    "card": {
-    "kicker": "As of 16 November 2026",
-    "title": "The foundation is in place",
+    "kicker": "As of 20 November 2026",
+    "title": "What is built",
     "figures": [
      {
       "v": "29",
@@ -669,13 +695,13 @@
       "k": "issues of the series Famulus Expertise"
      },
      {
-      "v": "11",
+      "v": "12",
       "k": "interfaces for agents"
      }
     ],
     "lines": [
      "Built: the address order, the register without a centre, the addresses of notebooks, the import of published issues",
-     "Future work: reference points of other institutions"
+     "Not yet built: reference points of other institutions"
     ]
    }
   }
